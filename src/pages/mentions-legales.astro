@@ -5,17 +5,94 @@ import PageIntro from '../components/PageIntro.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Mentions légales — Viia Pick">
+<Layout title="Mentions légales — Viia Pick" noindex={false}>
   <Header />
+
   <PageIntro eyebrow="Informations légales" title="Mentions légales">
-    <p class="contact__tbd">Contenu à rédiger avant mise en ligne — raison sociale, SIRET, hébergeur, directeur de publication.</p>
+    <p>Dernière mise à jour : 24 août 2026.</p>
   </PageIntro>
+
+  <section class="legal">
+    <div class="container">
+      <div class="legal__inner">
+      <article>
+        <h2>Éditeur du site</h2>
+        <p>Le site viia.pro est édité par Fabien Deschamps, entrepreneur individuel (micro-entreprise).</p>
+        <p>Statut juridique : Micro-entreprise</p>
+        <p>5 rue Gustave Nadaud, 59130 Lambersart</p>
+        <p>N° SIRET : 403 127 459 00069</p>
+        <p>N° TVA intracommunautaire : Non applicable (franchise en base de TVA)</p>
+        <p>Contact : <a href="mailto:contact@viia.pro">contact@viia.pro</a></p>
+        <p>Directeur de la publication : Fabien Deschamps</p>
+      </article>
+
+      <article>
+        <h2>Hébergeur</h2>
+        <p>Vercel Inc.</p>
+        <p>340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</p>
+        <p><a href="https://vercel.com">vercel.com</a></p>
+      </article>
+
+      <article>
+        <h2>Propriété intellectuelle</h2>
+        <p>
+          L'ensemble des contenus du site viia.pro (textes, images, logos, marque Viia, éléments
+          graphiques) est protégé par le droit de la propriété intellectuelle. Toute reproduction
+          ou représentation, totale ou partielle, sans autorisation préalable est interdite.
+        </p>
+      </article>
+      </div>
+    </div>
+  </section>
+
   <Footer />
 </Layout>
 
 <style>
-  .contact__tbd {
+  .legal {
+    padding-block: 0 clamp(64px, 8vw, 96px);
+  }
+
+  .legal__inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(32px, 5vw, 48px);
+    max-width: 68ch;
+  }
+
+  .legal h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+    margin-bottom: 14px;
+  }
+
+  .legal article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: clamp(24px, 4vw, 32px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .legal article:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .legal p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .legal a {
+    text-decoration: underline;
+  }
+
+  .tbd {
     font-style: italic;
-    opacity: 0.6;
+    opacity: 0.55;
   }
 </style>

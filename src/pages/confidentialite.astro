@@ -5,17 +5,128 @@ import PageIntro from '../components/PageIntro.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Politique de confidentialité — Viia Pick">
+<Layout title="Politique de confidentialité — Viia Pick" noindex={false}>
   <Header />
+
   <PageIntro eyebrow="Informations légales" title="Politique de confidentialité">
-    <p class="contact__tbd">Contenu à rédiger avant mise en ligne — données collectées via le formulaire de contact, durée de conservation, base légale.</p>
+    <p>Dernière mise à jour : 24 août 2026.</p>
   </PageIntro>
+
+  <section class="legal">
+    <div class="container">
+      <div class="legal__inner">
+      <article>
+        <h2>Responsable du traitement</h2>
+        <p>
+          Fabien Deschamps, 5 rue Gustave Nadaud, 59130 Lambersart,
+          joignable à <a href="mailto:contact@viia.pro">contact@viia.pro</a>.
+        </p>
+      </article>
+
+      <article>
+        <h2>Données collectées</h2>
+        <p>
+          Le site viia.pro collecte des données uniquement via son formulaire de contact : nom,
+          adresse e-mail, profil (collectivité / acteur privé / autre) et message. Aucune autre
+          collecte n'est effectuée.
+        </p>
+      </article>
+
+      <article>
+        <h2>Finalité et base légale</h2>
+        <p>
+          Ces données servent exclusivement à traiter et répondre à votre demande. La base légale
+          est votre consentement, matérialisé par l'envoi volontaire du formulaire.
+        </p>
+      </article>
+
+      <article>
+        <h2>Destinataires</h2>
+        <p>
+          Les données sont destinées au seul responsable du traitement et ne sont ni cédées ni
+          vendues à des tiers. Elles transitent par l'hébergeur (Vercel Inc.) et le service
+          d'envoi d'e-mails Resend, utilisés uniquement pour le fonctionnement technique du
+          formulaire.
+        </p>
+      </article>
+
+      <article>
+        <h2>Durée de conservation</h2>
+        <p>
+          Les données sont conservées 12 mois à compter du dernier échange, puis supprimées.
+        </p>
+      </article>
+
+      <article>
+        <h2>Vos droits</h2>
+        <p>
+          Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement,
+          de limitation et d'opposition sur vos données. Pour les exercer, écrivez à
+          <a href="mailto:contact@viia.pro">contact@viia.pro</a>. Vous pouvez également introduire une réclamation
+          auprès de la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).
+        </p>
+      </article>
+
+      <article>
+        <h2>Cookies</h2>
+        <p>
+          Le site viia.pro ne dépose aucun cookie de suivi ou publicitaire. Seuls d'éventuels
+          cookies techniques strictement nécessaires au fonctionnement du site peuvent être
+          utilisés.
+        </p>
+      </article>
+      </div>
+    </div>
+  </section>
+
   <Footer />
 </Layout>
 
 <style>
-  .contact__tbd {
+  .legal {
+    padding-block: 0 clamp(64px, 8vw, 96px);
+  }
+
+  .legal__inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(32px, 5vw, 48px);
+    max-width: 68ch;
+  }
+
+  .legal h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+    margin-bottom: 14px;
+  }
+
+  .legal article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: clamp(24px, 4vw, 32px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .legal article:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .legal p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .legal a {
+    text-decoration: underline;
+  }
+
+  .tbd {
     font-style: italic;
-    opacity: 0.6;
+    opacity: 0.55;
   }
 </style>
