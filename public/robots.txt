@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /editorial/apercu
+
+Sitemap: https://viia.pro/sitemap-index.xml
