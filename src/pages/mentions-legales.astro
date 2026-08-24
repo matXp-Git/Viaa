@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Mentions légales — Viia Pick">
+  <Header />
+  <PageIntro eyebrow="Informations légales" title="Mentions légales">
+    <p class="contact__tbd">Contenu à rédiger avant mise en ligne — raison sociale, SIRET, hébergeur, directeur de publication.</p>
+  </PageIntro>
+  <Footer />
+</Layout>
+
+<style>
+  .contact__tbd {
+    font-style: italic;
+    opacity: 0.6;
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  label: string;
+  ratio?: string;
+  class?: string;
+}
+
+const { label, ratio = '4 / 3', class: className = '' } = Astro.props;
+---
+
+<div class={`placeholder ${className}`} style={`aspect-ratio: ${ratio};`}>
+  <span class="placeholder__label data-label">Visuel à venir<br />{label}</span>
+  <slot />
+</div>
+
+<style>
+  .placeholder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--color-charcoal),
+      var(--color-charcoal) 1px,
+      var(--color-black) 1px,
+      var(--color-black) 14px
+    );
+    overflow: hidden;
+  }
+
+  .placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(23, 24, 26, 0.55);
+  }
+
+  .placeholder__label {
+    position: relative;
+    z-index: 1;
+    color: var(--color-white);
+    opacity: 0.85;
+    text-align: center;
+    line-height: 1.6;
+  }
+</style>

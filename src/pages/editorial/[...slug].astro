@@ -1,0 +1,229 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('editorial');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const {
+  title,
+  excerpt,
+  coverImage,
+  coverImageAlt,
+  secondaryImage,
+  secondaryImageAlt,
+  date,
+  category,
+  author,
+  metaTitle,
+  metaDescription,
+  draft,
+} = entry.data;
+
+const formattedDate = date.toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Layout title={`${metaTitle ?? title} — Viia Pick`} description={metaDescription} noindex={draft}>
+  <Header />
+
+  {draft && (
+    <div class="draft-banner">
+      <span class="data-label">Brouillon — non publié, absent de la liste des articles</span>
+    </div>
+  )}
+
+  <article>
+    <header class="article-hero">
+      <div class="article-hero__text">
+        <p class="eyebrow">{category}</p>
+        <h1 class="article-hero__title">{title}</h1>
+        <p class="article-hero__excerpt">{excerpt}</p>
+        <p class="data-label article-hero__meta">{author} — {formattedDate}</p>
+      </div>
+
+      <div class="article-hero__visual">
+        <Image src={coverImage} alt={coverImageAlt} width={992} height={1200} />
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="container article-body__inner">
+        <Content />
+
+        {secondaryImage && (
+          <figure class="article-body__figure">
+            <Image src={secondaryImage} alt={secondaryImageAlt ?? ''} width={1200} height={800} />
+          </figure>
+        )}
+      </div>
+    </div>
+  </article>
+
+  <CtaBanner
+    text="Une question sur nos interventions ?"
+    ctaLabel="Nous contacter →"
+    ctaHref="/contact"
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .draft-banner {
+    background: var(--color-accent);
+    color: var(--color-black);
+    text-align: center;
+    padding: 10px;
+  }
+
+  .article-hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .article-hero__text {
+    padding-left: max(var(--gutter), calc((100vw - var(--container-max)) / 2 + var(--gutter)));
+    padding-right: var(--gutter);
+    padding-block: clamp(40px, 6vw, 64px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .article-hero__title {
+    margin-top: 12px;
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    line-height: 1.15;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+    max-width: 720px;
+  }
+
+  .article-hero__excerpt {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 56ch;
+  }
+
+  .article-hero__meta {
+    opacity: 0.5;
+  }
+
+  .article-hero__visual {
+    position: relative;
+    min-height: 340px;
+  }
+
+  .article-hero__visual :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .article-body {
+    padding-block: clamp(48px, 7vw, 80px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .article-body__inner {
+    max-width: 720px;
+  }
+
+  .article-body__inner :global(h2) {
+    margin-top: 48px;
+    font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: var(--color-charcoal);
+  }
+
+  .article-body__inner :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .article-body__inner :global(h3) {
+    margin-top: 32px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+  }
+
+  .article-body__inner :global(p) {
+    margin-top: 16px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+
+  .article-body__inner :global(ul) {
+    margin-top: 16px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .article-body__inner :global(li) {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .article-body__inner :global(blockquote) {
+    margin: 32px 0;
+    padding-left: 20px;
+    border-left: 2px solid var(--color-accent);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--color-charcoal);
+  }
+
+  .article-body__inner :global(strong) {
+    font-weight: 700;
+  }
+
+  .article-body__figure {
+    margin: 40px 0 0;
+  }
+
+  .article-body__figure :global(img) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 900px) {
+    .article-hero {
+      grid-template-columns: 1fr;
+    }
+
+    .article-hero__text {
+      padding-right: var(--gutter);
+    }
+
+    .article-hero__visual {
+      min-height: 320px;
+    }
+  }
+</style>

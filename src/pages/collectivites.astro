@@ -1,0 +1,99 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import ChecklistSection from '../components/ChecklistSection.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+import ExternalLink from '../components/ExternalLink.astro';
+import collectivitesImage from '../assets/collectivites-intro.png';
+
+const items = [
+  'Redonner une image nette et soignée aux entrées et axes de votre commune.',
+  'Mettre en place une action environnementale concrète sur les zones délaissées.',
+  "Disposer de résultats chiffrés : tonnages collectés, zones traitées, déchets orientés vers une filière adaptée.",
+  'Soutenir l’emploi local des jeunes de votre territoire.',
+];
+---
+
+<Layout title="Collectivités — Viia Pick" description="Viia Pick intervient sur les zones délaissées de votre territoire : image nette, action environnementale et résultats documentés.">
+  <Header />
+
+  <PageIntro
+    eyebrow="Collectivités"
+    title="Reprendre la main sur les zones délaissées."
+    overlayLead="Service / 01"
+    overlayMeta={["Méthode / Piquage", "Zone / Urbaine · Périurbaine", "Status / Active"]}
+  >
+    <p>
+      Les entrées de ville, axes, ronds-points, zones d'activité, parkings et délaissés de voirie
+      participent directement à l'image d'un territoire.
+    </p>
+    <p>Mais l'enjeu ne se limite pas à l'apparence.</p>
+    <p>
+      Intervenir sur ces zones, c'est traiter une partie de la pollution diffuse et disposer de
+      résultats documentés.
+    </p>
+
+    <ExternalLink href="https://www.unep.org/fr/actualites-et-recits/recit/planete-plastique-de-minuscules-particules-de-plastique-polluent-notre">
+      Pollution : particules de plastique
+    </ExternalLink>
+
+    <Image
+      slot="image"
+      src={collectivitesImage}
+      alt="Opérateur Viia Pick nettoyant un rond-point avec une machine de nuit"
+      width={992}
+      height={1200}
+    />
+  </PageIntro>
+
+  <ChecklistSection eyebrow="Bénéfices" title="Avec Viia Pick, vous pouvez :" items={items} />
+
+  <section class="report">
+    <div class="container">
+      <p class="data-label report__label">Rapport et suivi</p>
+      <p class="report__text">
+        Les interventions sont documentées et les résultats peuvent être utilisés dans le suivi de
+        vos actions de propreté et environnementales.
+      </p>
+      <p class="report__note">— Indicateurs présentés à titre de maquette, à confirmer avant publication.</p>
+    </div>
+  </section>
+
+  <CtaBanner
+    text="Parlez-nous de votre territoire."
+    ctaLabel="Demander une intervention pilote →"
+    ctaHref="/contact"
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .report {
+    padding-block: clamp(48px, 7vw, 72px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .report__label {
+    opacity: 0.5;
+  }
+
+  .report__text {
+    margin-top: 16px;
+    max-width: 60ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .report__note {
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-style: italic;
+    opacity: 0.5;
+  }
+</style>

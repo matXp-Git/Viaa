@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Politique de confidentialité — Viia Pick">
+  <Header />
+  <PageIntro eyebrow="Informations légales" title="Politique de confidentialité">
+    <p class="contact__tbd">Contenu à rédiger avant mise en ligne — données collectées via le formulaire de contact, durée de conservation, base légale.</p>
+  </PageIntro>
+  <Footer />
+</Layout>
+
+<style>
+  .contact__tbd {
+    font-style: italic;
+    opacity: 0.6;
+  }
+</style>

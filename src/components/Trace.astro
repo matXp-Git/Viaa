@@ -1,0 +1,132 @@
+---
+const report = [
+  { key: 'OP', value: '0348' },
+  { key: 'DATE', value: '14.09.26' },
+  { key: 'ZONE', value: 'SECTEUR 03' },
+  { key: 'DÉBUT', value: '05:42' },
+  { key: 'FIN', value: '06:18' },
+  { key: 'DÉCHETS COLLECTÉS', value: '72,4 KG' },
+  { key: 'CONTRÔLE', value: '✓' },
+];
+---
+
+<section class="trace">
+  <div class="container trace__grid">
+    <div class="trace__content">
+      <p class="eyebrow eyebrow--light">04</p>
+      <h2 class="trace__title">Chaque intervention est mesurable, planifiée, contrôlée.</h2>
+      <p class="trace__text">
+        Viia fournit au client un rapport d'intervention chiffré. Le rapport permet de documenter
+        l'intervention réalisée et ses résultats.
+      </p>
+      <p class="trace__message">Des résultats plutôt que des promesses.</p>
+    </div>
+
+    <div class="trace__report">
+      <p class="data-label trace__report-title">Rapport d'intervention</p>
+      <div class="trace__report-body">
+        {report.map((row) => (
+          <div class="trace__report-row">
+            <span class="data-label">{row.key}</span>
+            <span class="data-label trace__report-value">{row.value}</span>
+          </div>
+        ))}
+      </div>
+      <p class="trace__report-footnote">— Structure de rapport illustrative, à remplacer par les données réelles.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trace {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding-block: clamp(56px, 8vw, 96px);
+  }
+
+  .trace__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: start;
+  }
+
+  .trace__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .eyebrow--light {
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+
+  .trace__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .trace__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.7;
+    max-width: 46ch;
+  }
+
+  .trace__message {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .trace__report {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-line-dark);
+    padding: 28px;
+  }
+
+  .trace__report-title {
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+
+  .trace__report-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .trace__report-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-line-dark);
+  }
+
+  .trace__report-row .data-label {
+    opacity: 0.6;
+  }
+
+  .trace__report-value {
+    opacity: 1 !important;
+    color: var(--color-accent);
+  }
+
+  .trace__report-footnote {
+    margin-top: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    opacity: 0.4;
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .trace__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

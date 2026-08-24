@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Footer from '../../components/Footer.astro';
+
+const entries = (await getCollection('editorial', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout
+  title="Éditorial — Viia Pick"
+  description="Analyses et retours de terrain sur la propreté urbaine, les déchets diffus et la collecte adaptée aux abords délaissés."
+>
+  <Header />
+
+  <PageIntro eyebrow="Éditorial" title="Regards sur la propreté du dernier kilomètre.">
+    <p>Analyses, retours de terrain et données autour des déchets diffus et de leur traitement.</p>
+  </PageIntro>
+
+  <section class="editorial-list">
+    <div class="container editorial-list__grid">
+      {entries.map((entry) => <ArticleCard entry={entry} />)}
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .editorial-list {
+    padding-block: 0 clamp(64px, 8vw, 96px);
+  }
+
+  .editorial-list__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(32px, 4vw, 48px);
+  }
+
+  @media (max-width: 900px) {
+    .editorial-list__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .editorial-list__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

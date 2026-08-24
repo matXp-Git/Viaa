@@ -1,0 +1,184 @@
+---
+import { Image } from 'astro:assets';
+import unitImage from '../assets/unit-equipment.png';
+
+const specs = [
+  { key: 'Autonomie', value: '8 H' },
+  { key: 'Capacité cuve eau', value: '600 L' },
+  { key: 'Largeur de travail', value: '2,10 M' },
+  { key: "Zone d'intervention", value: 'Centre' },
+];
+---
+
+<section class="unit">
+  <div class="unit__grid">
+    <div class="unit__content">
+      <p class="eyebrow eyebrow--light">05</p>
+      <h2 class="unit__title">Unit 04</h2>
+      <p class="data-label unit__subtitle">Nettoyage mécanisé</p>
+
+      <dl class="unit__specs">
+        {specs.map((spec) => (
+          <div class="unit__spec-row">
+            <dt class="data-label">{spec.key}</dt>
+            <dd class="data-label unit__spec-value">{spec.value}</dd>
+          </div>
+        ))}
+        <div class="unit__spec-row">
+          <dt class="data-label">Statut</dt>
+          <dd class="data-label unit__spec-value unit__status">
+            <span class="status-dot"></span>Active
+          </dd>
+        </div>
+      </dl>
+
+      <a href="/notre-methode" class="link-arrow">Voir le parc matériel →</a>
+
+      <p class="unit__note">— Unité et caractéristiques à titre temporaire, à remplacer par le parc réel de Viia Pick.</p>
+    </div>
+
+    <div class="unit__visual">
+      <Image
+        src={unitImage}
+        alt="Véhicule et opérateur Viia Pick en intervention de nuit"
+        class="unit__image"
+        width={1536}
+        height={1024}
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .unit {
+    background: var(--color-black);
+    color: var(--color-white);
+    overflow: hidden;
+  }
+
+  .unit__grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: stretch;
+    min-height: 480px;
+  }
+
+  .unit__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 48px) clamp(32px, 5vw, 56px)
+      max(var(--gutter), calc((100vw - var(--container-max)) / 2 + var(--gutter)));
+  }
+
+  .eyebrow--light {
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+
+  .unit__title {
+    margin-top: 12px;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+
+  .unit__subtitle {
+    opacity: 0.55;
+  }
+
+  .unit__specs {
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .unit__spec-row {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .unit__spec-row dt {
+    flex: 1 1 auto;
+    overflow: hidden;
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+
+  .unit__spec-row dt::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    min-width: 24px;
+    margin: 0 8px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .unit__spec-value {
+    margin: 0;
+    flex: 0 0 auto;
+    text-align: right;
+    opacity: 0.9;
+  }
+
+  .unit__status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    opacity: 1;
+    color: var(--color-accent);
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(235, 237, 56, 0.25);
+  }
+
+  .unit__content .link-arrow {
+    margin-top: 20px;
+    align-self: flex-start;
+    color: var(--color-white);
+  }
+
+  .unit__note {
+    margin-top: auto;
+    padding-top: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-style: italic;
+    opacity: 0.4;
+  }
+
+  .unit__visual {
+    position: relative;
+    min-height: 320px;
+  }
+
+  .unit__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 40%;
+  }
+
+  @media (max-width: 900px) {
+    .unit__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .unit__content {
+      padding-right: var(--gutter);
+    }
+
+    .unit__visual {
+      min-height: 320px;
+    }
+  }
+</style>

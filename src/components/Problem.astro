@@ -1,0 +1,109 @@
+---
+---
+
+<section class="problem">
+  <div class="problem__visual">
+    <span class="problem__visual-label data-label">Visuel à venir<br />Déchets diffus — abords urbains</span>
+  </div>
+
+  <div class="problem__scrim"></div>
+
+  <div class="container problem__content">
+    <p class="eyebrow eyebrow--light">02</p>
+
+    <h2 class="problem__title">Entre les grands passages, il reste des déchets.</h2>
+
+    <p class="problem__lead">
+      Plastiques, verre, papier, aluminium : dispersés sur les abords urbains et périurbains, ils
+      dégradent les lieux et peuvent contribuer à la pollution des sols et des eaux.
+    </p>
+
+    <p class="problem__bold">Viia Pick intervient là où la collecte fine est nécessaire.</p>
+
+    <blockquote class="problem__quote">La propreté du dernier kilomètre n'est pas un détail.</blockquote>
+  </div>
+</section>
+
+<style>
+  .problem {
+    position: relative;
+    min-height: 640px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .problem__visual {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--color-charcoal),
+      var(--color-charcoal) 1px,
+      var(--color-black) 1px,
+      var(--color-black) 14px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .problem__visual-label {
+    color: var(--color-white);
+    opacity: 0.5;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .problem__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(23, 24, 26, 0.92) 0%, rgba(23, 24, 26, 0.35) 65%, rgba(23, 24, 26, 0.35) 100%);
+  }
+
+  .problem__content {
+    position: relative;
+    z-index: 1;
+    padding-block: clamp(48px, 8vw, 88px);
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .eyebrow--light {
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+
+  .problem__title {
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    line-height: 1.15;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  .problem__lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-white);
+    opacity: 0.75;
+    max-width: 56ch;
+  }
+
+  .problem__bold {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  .problem__quote {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    border-left: 2px solid var(--color-accent);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-accent);
+  }
+</style>

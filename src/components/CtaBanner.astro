@@ -1,0 +1,36 @@
+---
+interface Props {
+  text: string;
+  ctaLabel: string;
+  ctaHref: string;
+}
+
+const { text, ctaLabel, ctaHref } = Astro.props;
+---
+
+<section class="cta-banner">
+  <div class="container cta-banner__inner">
+    <p class="cta-banner__text">{text}</p>
+    <a href={ctaHref} class="btn btn-accent">{ctaLabel}</a>
+  </div>
+</section>
+
+<style>
+  .cta-banner {
+    padding-block: clamp(48px, 7vw, 72px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .cta-banner__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .cta-banner__text {
+    font-size: 1.2rem;
+    max-width: 46ch;
+  }
+</style>

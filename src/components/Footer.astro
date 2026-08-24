@@ -1,0 +1,156 @@
+---
+const columns = [
+  {
+    title: 'Collectivités',
+    links: [{ label: 'Notre approche', href: '/collectivites' }],
+  },
+  {
+    title: 'Entreprises',
+    links: [{ label: 'Nos solutions', href: '/acteurs-prives' }],
+  },
+  {
+    title: 'Viia',
+    links: [
+      { label: 'Notre méthode', href: '/notre-methode' },
+      { label: 'Le terrain', href: '/le-terrain' },
+      { label: 'Aperçu éditorial', href: '/editorial/apercu' },
+    ],
+  },
+  {
+    title: 'Contact',
+    links: [{ label: 'Nous écrire', href: '/contact' }],
+  },
+];
+---
+
+<footer class="footer">
+  <div class="container footer__top">
+    <a href="/" class="logo footer__logo">
+      <img src="/logo-viia-white.svg" alt="Viia" class="logo__mark" />
+      <span class="logo__dot">.</span>
+      <span class="logo__product data-label">PICK</span>
+    </a>
+
+    <div class="footer__columns">
+      {columns.map((column) => (
+        <div class="footer__column">
+          <p class="data-label footer__column-title">{column.title}</p>
+          <ul class="footer__links">
+            {column.links.map((link) => (
+              <li><a href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p class="data-label">© Viia {new Date().getFullYear()}</p>
+    <div class="footer__legal">
+      <a href="/mentions-legales" class="data-label">Mentions légales</a>
+      <a href="/confidentialite" class="data-label">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding-top: clamp(48px, 7vw, 80px);
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(32px, 5vw, 64px);
+    padding-bottom: clamp(40px, 6vw, 64px);
+    border-bottom: 1px solid var(--color-line-dark);
+  }
+
+  .footer__logo {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--color-white);
+  }
+
+  .footer__logo .logo__product {
+    color: var(--color-white);
+    opacity: 0.5;
+  }
+
+  .footer__logo .logo__mark {
+    height: 25px;
+    width: auto;
+    display: block;
+  }
+
+  .footer__logo .logo__dot {
+    color: var(--color-accent);
+    margin-right: -6px;
+  }
+
+  .footer__columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .footer__column-title {
+    opacity: 0.45;
+    margin-bottom: 16px;
+  }
+
+  .footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer__links a {
+    font-size: 0.92rem;
+    opacity: 0.85;
+  }
+
+  .footer__links a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+  }
+
+  .footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 24px;
+    opacity: 0.5;
+  }
+
+  .footer__legal {
+    display: flex;
+    gap: 24px;
+  }
+
+  @media (max-width: 860px) {
+    .footer__top {
+      grid-template-columns: 1fr;
+    }
+
+    .footer__columns {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

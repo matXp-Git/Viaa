@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Method from '../components/Method.astro';
+import UnitSection from '../components/UnitSection.astro';
+import ResponsibilitySection from '../components/ResponsibilitySection.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+import teamImage from '../assets/team-briefing.png';
+---
+
+<Layout title="Notre méthode — Viia Pick" description="Prévoir, intervenir, mesurer, améliorer : la méthode Viia Pick, son équipement et sa démarche de mesure d'impact.">
+  <Header />
+
+  <PageIntro
+    eyebrow="Notre méthode"
+    title="Une méthode, quatre étapes."
+    overlayLead="Service / 05"
+    overlayMeta={["Méthode / Repérage", "Zone / Urbaine · Périurbaine", "Status / Active"]}
+  >
+    <p>
+      Viia structure ses interventions du diagnostic du site jusqu'à l'amélioration continue des
+      résultats.
+    </p>
+
+    <Image
+      slot="image"
+      src={teamImage}
+      alt="Équipe Viia Pick en briefing avant intervention"
+      width={992}
+      height={1200}
+    />
+  </PageIntro>
+
+  <Method eyebrow="Étapes" bordered={false} />
+  <UnitSection />
+  <ResponsibilitySection />
+
+  <CtaBanner
+    text="Une question sur notre méthode ?"
+    ctaLabel="Nous contacter →"
+    ctaHref="/contact"
+  />
+
+  <Footer />
+</Layout>

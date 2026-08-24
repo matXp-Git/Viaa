@@ -1,0 +1,118 @@
+---
+interface Props {
+  eyebrow?: string;
+  bordered?: boolean;
+}
+
+const { eyebrow = '05', bordered = true } = Astro.props;
+
+const steps = [
+  {
+    number: '01',
+    title: 'Prévoir',
+    text: "C'est déterminer le responsable de la voie pour une intervention adaptée au site et à ses contraintes.",
+  },
+  {
+    number: '02',
+    title: 'Intervenir',
+    text: 'Une équipe formée, un équipement adapté et une méthode de collecte fine.',
+  },
+  {
+    number: '03',
+    title: 'Mesurer',
+    text: "Les résultats de l'intervention sont documentés dans un rapport chiffré.",
+  },
+  {
+    number: '04',
+    title: 'Améliorer',
+    text: "Les données permettent de suivre les résultats et d'identifier les progrès.",
+  },
+];
+---
+
+<section class={`method ${bordered ? '' : 'method--no-border'}`}>
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2 class="method__title">Prévoir. Intervenir. Mesurer. Améliorer.</h2>
+    <p class="method__intro">Viia structure ses interventions autour de quatre étapes.</p>
+
+    <div class="method__grid">
+      {steps.map((step) => (
+        <div class="method__step">
+          <p class="data-label method__step-number">{step.number}</p>
+          <h3 class="method__step-title">{step.title}</h3>
+          <p class="method__step-text">{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .method {
+    padding-block: clamp(64px, 8vw, 96px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .method--no-border {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .method__title {
+    margin-top: 24px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    font-weight: 400;
+    text-transform: uppercase;
+    max-width: 640px;
+  }
+
+  .method__intro {
+    margin-top: 12px;
+    opacity: 0.65;
+  }
+
+  .method__grid {
+    margin-top: clamp(40px, 6vw, 64px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(20px, 3vw, 32px);
+  }
+
+  .method__step {
+    padding-top: 20px;
+    border-top: 2px solid var(--color-charcoal);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .method__step-number {
+    opacity: 0.5;
+  }
+
+  .method__step-title {
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .method__step-text {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    opacity: 0.75;
+  }
+
+  @media (max-width: 900px) {
+    .method__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .method__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

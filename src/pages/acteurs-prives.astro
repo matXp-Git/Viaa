@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import ChecklistSection from '../components/ChecklistSection.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+import acteursPrivesImage from '../assets/acteurs-prives-intro.png';
+
+const items = [
+  'Offrir des abords soignés à vos clients et collaborateurs.',
+  'Documenter une démarche environnementale réelle et chiffrée.',
+  'Bénéficier d’une intervention adaptée aux contraintes de votre site.',
+  'Associer votre démarche à un service moderne, spécialisé et mesurable.',
+];
+---
+
+<Layout title="Acteurs privés — Viia Pick" description="Viia Pick intervient sur vos zones commerciales, parkings, sièges et sites logistiques avec une méthode adaptée et documentée.">
+  <Header />
+
+  <PageIntro
+    eyebrow="Acteurs privés"
+    title="Vos abords parlent de vous avant vous."
+    overlayLead="Service / 03"
+    overlayMeta={["Méthode / Piquage", "Zone / Commerciale", "Status / Active"]}
+  >
+    <p>
+      Zone commerciale, parking, siège, résidence, site logistique : les espaces extérieurs sont
+      les premiers lieux vus par vos clients, visiteurs et collaborateurs.
+    </p>
+    <p>
+      Viia Pick intervient sur ces zones avec une méthode souple, adaptée aux contraintes du site
+      et documentée.
+    </p>
+
+    <Image
+      slot="image"
+      src={acteursPrivesImage}
+      alt="Opérateur Viia Pick nettoyant un parking de zone commerciale de nuit"
+      width={992}
+      height={1200}
+    />
+  </PageIntro>
+
+  <ChecklistSection eyebrow="Bénéfices" title="Avec Viia Pick, vous pouvez :" items={items} />
+
+  <CtaBanner text="Parlez-nous de votre site." ctaLabel="Demander un devis →" ctaHref="/contact" />
+
+  <Footer />
+</Layout>

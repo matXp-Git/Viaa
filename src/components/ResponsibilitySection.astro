@@ -1,0 +1,120 @@
+---
+const indicators = ['Eau', 'Énergie', 'Déplacements', 'Recyclage / Valorisation', 'Outillages électriques / manuels'];
+---
+
+<section class="responsibility">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">Responsabilité</p>
+    <h2 class="responsibility__title">Mesurer l'impact. Publier les résultats.</h2>
+
+    <div class="responsibility__grid">
+      <div>
+        <p class="responsibility__text">
+          Viia suit les résultats environnementaux de son activité et souhaite les rendre utiles
+          au client. Un rapport annuel chiffré permet de documenter les progrès réalisés en
+          matière d'environnement.
+        </p>
+        <p class="responsibility__text">
+          Les données environnementales peuvent être utilisées dans les propres rapports et
+          démarches environnementales du client.
+        </p>
+        <p class="responsibility__note">
+          — Format et indicateurs à remplacer par les données réellement produites par Viia.
+        </p>
+      </div>
+
+      <div class="responsibility__indicators">
+        <p class="data-label responsibility__indicators-label">Indicateurs envisagés</p>
+        <ul class="responsibility__list">
+          {indicators.map((label) => (
+            <li>
+              <span class="data-label">{label}</span>
+              <span class="data-label responsibility__tbd">à valider</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .responsibility {
+    background: var(--color-charcoal);
+    color: var(--color-white);
+    padding-block: clamp(64px, 8vw, 96px);
+  }
+
+  .eyebrow--light {
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+
+  .responsibility__title {
+    margin-top: 16px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    max-width: 640px;
+  }
+
+  .responsibility__grid {
+    margin-top: clamp(32px, 5vw, 48px);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(32px, 5vw, 64px);
+  }
+
+  .responsibility__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.75;
+    margin-bottom: 14px;
+    max-width: 50ch;
+  }
+
+  .responsibility__note {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-style: italic;
+    opacity: 0.5;
+  }
+
+  .responsibility__indicators-label {
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+
+  .responsibility__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsibility__list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid var(--color-line-dark);
+  }
+
+  .responsibility__list li:last-child {
+    border-bottom: 1px solid var(--color-line-dark);
+  }
+
+  .responsibility__tbd {
+    color: var(--color-accent);
+    opacity: 1;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: 900px) {
+    .responsibility__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className = '' } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" class={`external-link ${className}`}>
+  <span class="external-link__label"><slot /></span>
+  <span class="external-link__icon" aria-hidden="true">
+    <svg viewBox="0 0 16 16" width="10" height="10">
+      <path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" />
+    </svg>
+  </span>
+</a>
+
+<style>
+  .external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-charcoal);
+  }
+
+  .external-link__label {
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .external-link__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    background: var(--color-accent);
+    color: var(--color-charcoal);
+    transition: transform 0.15s ease;
+  }
+
+  .external-link:hover .external-link__icon {
+    transform: translate(2px, -2px);
+  }
+</style>

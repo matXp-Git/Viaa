@@ -1,0 +1,105 @@
+---
+const reasons = [
+  {
+    number: '01',
+    title: 'Précision',
+    bold: 'Chaque intervention est mesurable, planifiée, contrôlée.',
+    text: 'Un rapport d’intervention chiffré est livré au client.',
+  },
+  {
+    number: '02',
+    title: 'Terrain',
+    bold: 'Des femmes, des hommes, des machines et des lieux réels.',
+    text: 'Viia crée des opportunités de travail compatibles avec les parcours de vie et les études.',
+  },
+  {
+    number: '03',
+    title: 'Performance',
+    bold: 'Des résultats plutôt que des promesses.',
+    text: 'Les interventions et leurs résultats sont documentés.',
+  },
+  {
+    number: '04',
+    title: 'Continuité',
+    bold: "Le service s'adapte au lieu, pas l'inverse.",
+    text: 'Les interventions sont adaptées aux contraintes du site.',
+  },
+  {
+    number: '05',
+    title: 'Responsabilité',
+    bold: "Mesurer l'impact pour pouvoir l'améliorer.",
+    text: 'Viia suit ses résultats environnementaux et fournit des données utilisables par ses clients.',
+  },
+];
+---
+
+<section class="why">
+  <div class="container">
+    <p class="eyebrow">07</p>
+    <h2 class="why__title">Une réponse spécialisée à un problème précis.</h2>
+
+    <div class="why__list">
+      {reasons.map((reason) => (
+        <div class="why__item">
+          <p class="data-label why__item-meta">{reason.number} / {reason.title}</p>
+          <p class="why__item-bold">{reason.bold}</p>
+          <p class="why__item-text">{reason.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why {
+    padding-block: clamp(64px, 8vw, 96px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .why__title {
+    margin-top: 24px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    max-width: 640px;
+  }
+
+  .why__list {
+    margin-top: clamp(32px, 5vw, 48px);
+  }
+
+  .why__item {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr;
+    gap: 24px;
+    align-items: baseline;
+    padding: 22px 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .why__item:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .why__item-meta {
+    opacity: 0.5;
+  }
+
+  .why__item-bold {
+    font-weight: 700;
+    font-size: 1.02rem;
+  }
+
+  .why__item-text {
+    font-size: 0.92rem;
+    opacity: 0.7;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 860px) {
+    .why__item {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+</style>

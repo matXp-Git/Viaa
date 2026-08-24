@@ -1,0 +1,145 @@
+---
+const cards = [
+  {
+    label: 'Ce que nous collectons',
+    value: 'Plastiques · Verre · Papier · Aluminium',
+    note: null,
+  },
+  {
+    label: 'Ce que nous en faisons',
+    value: "L'intégralité des déchets collectés est orientée vers une filière de recyclage via notre partenaire.",
+    note: 'Partenaire et filière à confirmer avant publication.',
+  },
+  {
+    label: 'Objectif',
+    value: '20 tonnes / an',
+    note: 'Objectif à confirmer avant publication.',
+    big: true,
+  },
+];
+---
+
+<section class="service">
+  <div class="container">
+    <p class="eyebrow">03</p>
+
+    <div class="service__intro">
+      <h2 class="service__title">La collecte des déchets diffus.</h2>
+      <div class="service__text">
+        <p>
+          Viia Pick est un service spécialisé dans le piquage et la collecte des déchets diffus
+          sur les abords urbains et périurbains.
+        </p>
+        <p>
+          Notre approche repose sur un équipement de collecte électrique, compact et silencieux,
+          piloté par un opérateur formé. L'intervention est conçue pour être adaptée aux
+          contraintes du site et documentée.
+        </p>
+      </div>
+    </div>
+
+    <div class="service__cards">
+      {cards.map((card) => (
+        <div class="service__card">
+          <p class="data-label service__card-label">{card.label}</p>
+          <p class={`service__card-value ${card.big ? 'service__card-value--big' : ''}`}>{card.value}</p>
+          {card.note && <p class="service__card-note data-label">— {card.note}</p>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .service {
+    padding-block: clamp(64px, 8vw, 96px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .service__intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 64px);
+    margin-top: 24px;
+    padding-bottom: clamp(40px, 6vw, 64px);
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .service__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .service__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .service__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--color-line);
+    margin-top: clamp(40px, 6vw, 64px);
+  }
+
+  .service__card {
+    background: var(--color-offwhite);
+    padding: 28px clamp(16px, 2vw, 24px) 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service__card:first-child {
+    padding-left: 0;
+  }
+
+  .service__card-label {
+    opacity: 0.6;
+  }
+
+  .service__card-value {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  .service__card-value--big {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    color: var(--color-charcoal);
+  }
+
+  .service__card-note {
+    color: var(--color-charcoal);
+    opacity: 0.5;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: 900px) {
+    .service__intro,
+    .service__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .service__cards {
+      gap: 32px;
+      background: none;
+    }
+
+    .service__card {
+      padding-right: 0;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--color-line);
+    }
+  }
+</style>

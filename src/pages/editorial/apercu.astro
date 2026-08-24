@@ -1,0 +1,135 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Footer from '../../components/Footer.astro';
+
+const entries = (await getCollection('editorial')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout
+  title="Aperçu éditorial — Viia Pick"
+  description="Vue d'ensemble interne de tous les articles, publiés et brouillons."
+  noindex={true}
+>
+  <Header />
+
+  <PageIntro eyebrow="Éditorial" title="Aperçu de tous les articles.">
+    <p>
+      Vue interne — chaque ligne renvoie vers l'article, publié ou non. Les brouillons ne sont
+      visibles que depuis cette page et par lien direct.
+    </p>
+  </PageIntro>
+
+  <section class="overview">
+    <div class="container">
+      <div class="overview__table">
+        <div class="overview__row overview__row--head">
+          <span class="data-label">Statut</span>
+          <span class="data-label">Titre</span>
+          <span class="data-label">Catégorie</span>
+          <span class="data-label">Date</span>
+        </div>
+
+        {entries.map((entry) => (
+          <a href={`/editorial/${entry.id}`} class="overview__row">
+            <span class={`status-pill ${entry.data.draft ? 'status-pill--draft' : 'status-pill--live'}`}>
+              {entry.data.draft ? 'Brouillon' : 'Publié'}
+            </span>
+            <span class="overview__title">{entry.data.title}</span>
+            <span class="overview__meta">{entry.data.category}</span>
+            <span class="overview__meta">
+              {entry.data.date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .overview {
+    padding-block: 0 clamp(64px, 8vw, 96px);
+  }
+
+  .overview__table {
+    margin-top: clamp(32px, 5vw, 48px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overview__row {
+    display: grid;
+    grid-template-columns: 110px 1fr 160px 120px;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid var(--color-line);
+    color: var(--color-charcoal);
+    transition: background 0.15s ease;
+  }
+
+  a.overview__row:hover {
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  }
+
+  .overview__table > a:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .overview__row--head {
+    color: var(--color-charcoal);
+    opacity: 0.5;
+  }
+
+  .overview__title {
+    font-size: 0.95rem;
+  }
+
+  .overview__meta {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    width: fit-content;
+  }
+
+  .status-pill--live {
+    background: color-mix(in srgb, var(--color-accent) 70%, transparent);
+    color: var(--color-charcoal);
+  }
+
+  .status-pill--draft {
+    background: transparent;
+    border: 1px solid var(--color-line);
+    color: var(--color-charcoal);
+    opacity: 0.6;
+  }
+
+  @media (max-width: 700px) {
+    .overview__row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .overview__row--head {
+      display: none;
+    }
+  }
+</style>

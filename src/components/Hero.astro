@@ -1,0 +1,180 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero-intervention.jpeg';
+---
+
+<section class="hero">
+  <div class="hero__grid">
+    <div class="hero__content">
+      <p class="eyebrow">01</p>
+
+      <h1 class="hero__title">Les zones délaissées ne le sont plus.</h1>
+
+      <p class="hero__descripteur">Viia Pick — collecte des déchets diffus</p>
+
+      <p class="hero__text">
+        Les abords des villes — bretelles, ronds-points, zones d'activité, parkings, délaissés de
+        voirie — sont des espaces où les déchets diffus restent souvent en dehors des dispositifs
+        classiques de propreté.
+        <br /><br />
+        Viia Pick intervient précisément sur ces zones.
+      </p>
+
+      <div class="hero__nav">
+        <a href="/collectivites" class="link-arrow">Vous êtes une collectivité →</a>
+        <a href="/acteurs-prives" class="link-arrow">Vous êtes un acteur privé →</a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__image-frame">
+        <Image
+          src={heroImage}
+          alt="Opérateur Viia Pick en intervention de nuit, équipement de collecte électrique"
+          class="hero__image"
+          width={902}
+          height={768}
+        />
+        <div class="hero__overlay">
+          <p class="hero__overlay-lead">Service / 01</p>
+          <div class="hero__overlay-meta">
+            <p class="data-label">Méthode / Piquage</p>
+            <p class="data-label">Zone / Urbaine · Périurbaine</p>
+            <p class="data-label hero__status"><span class="status-dot"></span>Status / Active</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: 0;
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: clamp(32px, 5vw, 80px);
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 560px;
+    padding-left: max(var(--gutter), calc((100vw - var(--container-max)) / 2 + var(--gutter)));
+    padding-right: var(--gutter);
+    padding-bottom: clamp(40px, 6vw, 64px);
+  }
+
+  .hero__title {
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height: 1.05;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: var(--color-charcoal);
+  }
+
+  .hero__descripteur {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    color: var(--color-charcoal);
+    opacity: 0.7;
+  }
+
+  .hero__text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    opacity: 0.85;
+  }
+
+  .hero__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .hero__visual {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__image-frame {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 420px;
+    overflow: hidden;
+    background: var(--color-black);
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 45% 50%;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--color-white);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 35%);
+  }
+
+  .hero__overlay-lead {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .hero__overlay-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero__overlay .data-label {
+    opacity: 0.85;
+  }
+
+  .hero__status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(235, 237, 56, 0.25);
+  }
+
+  @media (max-width: 900px) {
+    .hero__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero__content {
+      max-width: none;
+    }
+  }
+</style>

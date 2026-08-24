@@ -1,0 +1,107 @@
+---
+const rows = [
+  { label: 'Déchets diffus détournés de la nature', value: '20 tonnes / an', tag: 'objectif annuel' },
+  { label: 'Déchets orientés vers une filière de valorisation', value: '96 %', tag: 'objectif annuel' },
+  { label: 'Emplois jeunes soutenus', value: '42', tag: 'objectif annuel' },
+  { label: "Délai d'intervention", value: '72 h', tag: 'objectif annuel' },
+];
+---
+
+<section class="results">
+  <div class="container">
+    <p class="eyebrow">06</p>
+    <h2 class="results__title">Nos objectifs annuels.</h2>
+    <p class="results__intro">Des objectifs mesurables, que nous nous engageons à publier et à documenter.</p>
+
+    <div class="results__table">
+      {rows.map((row) => (
+        <div class="results__row">
+          <span class="results__label">{row.label}</span>
+          <span class="results__value">
+            {row.value}
+            <span class="data-label results__tag">{row.tag}</span>
+          </span>
+        </div>
+      ))}
+    </div>
+
+    <blockquote class="results__quote">Des chiffres que nous publions et que vous pouvez présenter.</blockquote>
+  </div>
+</section>
+
+<style>
+  .results {
+    padding-block: clamp(64px, 8vw, 96px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .results__title {
+    margin-top: 24px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .results__intro {
+    margin-top: 12px;
+    opacity: 0.65;
+  }
+
+  .results__table {
+    margin-top: clamp(32px, 5vw, 48px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .results__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .results__row:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .results__label {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    max-width: 46ch;
+  }
+
+  .results__value {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .results__tag {
+    opacity: 0.45;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .results__quote {
+    margin: clamp(32px, 5vw, 48px) 0 0;
+    padding-left: 18px;
+    border-left: 2px solid var(--color-accent);
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  @media (max-width: 700px) {
+    .results__row {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+</style>

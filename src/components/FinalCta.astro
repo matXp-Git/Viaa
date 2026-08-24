@@ -1,0 +1,63 @@
+---
+---
+
+<section class="final-cta">
+  <div class="container final-cta__grid">
+    <div>
+      <p class="eyebrow">09</p>
+      <h2 class="final-cta__title">Une zone délaissée ?<br />On s'en occupe.</h2>
+    </div>
+
+    <div class="final-cta__side">
+      <p class="final-cta__text">Parlez-nous de votre territoire ou de votre site.</p>
+      <div class="final-cta__links">
+        <a href="/collectivites" class="btn btn-accent">Collectivités →</a>
+        <a href="/acteurs-prives" class="btn btn-ghost">Acteurs privés →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    padding-block: clamp(64px, 9vw, 112px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .final-cta__grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: end;
+  }
+
+  .final-cta__title {
+    margin-top: 24px;
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.05;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .final-cta__side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .final-cta__text {
+    opacity: 0.7;
+  }
+
+  .final-cta__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @media (max-width: 860px) {
+    .final-cta__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

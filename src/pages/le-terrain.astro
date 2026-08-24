@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Footer from '../components/Footer.astro';
+
+const stats = [
+  { value: '42', label: 'Jeunes employés / an', provisional: true },
+  { value: '42', label: 'Jeunes formés', provisional: true },
+  { value: '126', label: "Heures de formation", provisional: true },
+  { value: 'Horaires adaptés', label: 'Organisation', provisional: true, isText: true },
+];
+---
+
+<Layout title="Le terrain — Viia Pick" description="Viia privilégie le recrutement de jeunes pour leur permettre d'accéder au monde du travail, avec une organisation compatible avec leurs études.">
+  <Header />
+
+  <PageIntro eyebrow="Le terrain" title="Le terrain est aussi une école.">
+    <p>
+      Viia privilégie le recrutement de jeunes pour leur permettre d'accéder au monde du travail,
+      avec une organisation compatible avec leurs études.
+    </p>
+    <p>
+      Les opérateurs sont formés et encadrés pour utiliser les équipements et réaliser les
+      interventions.
+    </p>
+    <p>
+      L'activité permet de développer une première expérience professionnelle autour de la
+      rigueur, de la responsabilité, du service et de la sensibilisation à l'environnement.
+    </p>
+  </PageIntro>
+
+  <section class="stats">
+    <div class="container">
+      <p class="eyebrow">Objectifs</p>
+      <div class="stats__grid">
+        {stats.map((stat) => (
+          <div class="stats__card">
+            <p class={`stats__value ${stat.isText ? 'stats__value--text' : ''}`}>{stat.value}</p>
+            <p class="data-label stats__label">{stat.label}</p>
+            {stat.provisional && <p class="data-label stats__tag">objectif</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="message">
+    <div class="container">
+      <blockquote class="message__quote">
+        Créer des opportunités de travail compatibles avec les parcours de vie.
+      </blockquote>
+    </div>
+  </section>
+
+  <CtaBanner
+    text="Vous voulez en savoir plus sur nos équipes ?"
+    ctaLabel="Nous contacter →"
+    ctaHref="/contact"
+  />
+
+  <Footer />
+</Layout>
+
+<style>
+  .stats {
+    padding-block: clamp(56px, 8vw, 88px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .stats__grid {
+    margin-top: clamp(32px, 5vw, 48px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--color-line);
+  }
+
+  .stats__card {
+    background: var(--color-offwhite);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stats__card:first-child {
+    padding-left: 0;
+  }
+
+  .stats__value {
+    font-family: var(--font-mono);
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--color-charcoal);
+  }
+
+  .stats__value--text {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .stats__label {
+    opacity: 0.6;
+  }
+
+  .stats__tag {
+    opacity: 0.4;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .message {
+    padding-block: clamp(56px, 8vw, 88px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .message__quote {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    line-height: 1.4;
+    font-style: italic;
+    padding-left: 20px;
+    border-left: 2px solid var(--color-accent);
+  }
+
+  @media (max-width: 900px) {
+    .stats__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .stats__grid {
+      grid-template-columns: 1fr;
+      background: none;
+    }
+
+    .stats__card {
+      padding-right: 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-line);
+    }
+  }
+</style>

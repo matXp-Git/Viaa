@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Footer from '../components/Footer.astro';
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+
+<Layout title="Contact — Viia Pick" description="Parlez-nous de votre territoire ou de votre site : collectivités et acteurs privés.">
+  <Header />
+
+  <PageIntro eyebrow="Contact" title="Une zone délaissée ? On s'en occupe.">
+    <p>Parlez-nous de votre territoire ou de votre site.</p>
+  </PageIntro>
+
+  <section class="contact">
+    <div class="container contact__grid">
+      <form class="contact__form" id="contact-form">
+        <label class="contact__field">
+          <span class="data-label">Nom</span>
+          <input type="text" name="name" required />
+        </label>
+
+        <label class="contact__field">
+          <span class="data-label">Email</span>
+          <input type="email" name="email" required />
+        </label>
+
+        <label class="contact__field">
+          <span class="data-label">Vous êtes</span>
+          <select name="profile">
+            <option value="collectivite">Une collectivité</option>
+            <option value="prive">Un acteur privé</option>
+            <option value="autre">Autre</option>
+          </select>
+        </label>
+
+        <label class="contact__field">
+          <span class="data-label">Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <input
+          type="text"
+          name="company"
+          class="contact__honeypot"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+
+        <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light"></div>
+
+        <button type="submit" class="btn btn-accent">Envoyer →</button>
+        <p class="contact__form-status" data-status hidden></p>
+        <p class="contact__form-note">— Adresse de réception à confirmer avant mise en ligne.</p>
+      </form>
+
+      <div class="contact__info">
+        <p class="data-label contact__info-label">Coordonnées</p>
+        <p class="contact__info-line">Email — <span class="contact__tbd">[à valider]</span></p>
+        <p class="contact__info-line">Téléphone — <span class="contact__tbd">[à valider]</span></p>
+        <p class="contact__info-line">Adresse — <span class="contact__tbd">[à valider]</span></p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+  declare const turnstile: { reset: (container?: string | HTMLElement) => void };
+
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = form.querySelector<HTMLParagraphElement>('[data-status]')!;
+  const turnstileWidget = form.querySelector<HTMLElement>('.cf-turnstile')!;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+
+    submitButton.disabled = true;
+    status.hidden = true;
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: new FormData(form),
+      });
+
+      if (!response.ok) throw new Error('request failed');
+
+      status.textContent = 'Message envoyé — nous revenons vers vous rapidement.';
+      status.dataset.state = 'success';
+      status.hidden = false;
+      form.reset();
+    } catch {
+      status.textContent = "Une erreur est survenue, réessayez ou écrivez-nous directement par email.";
+      status.dataset.state = 'error';
+      status.hidden = false;
+    } finally {
+      submitButton.disabled = false;
+      if (typeof turnstile !== 'undefined') turnstile.reset(turnstileWidget);
+    }
+  });
+</script>
+
+<style>
+  .contact {
+    padding-block: clamp(48px, 7vw, 72px) clamp(80px, 10vw, 120px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: clamp(32px, 5vw, 64px);
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 520px;
+  }
+
+  .contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact__field input,
+  .contact__field select,
+  .contact__field textarea {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--color-charcoal);
+    background: transparent;
+    border: 1px solid var(--color-line);
+    border-radius: 4px;
+    padding: 12px 14px;
+    resize: vertical;
+  }
+
+  .contact__field input:focus,
+  .contact__field select:focus,
+  .contact__field textarea:focus {
+    outline: none;
+    border-color: var(--color-charcoal);
+  }
+
+  .contact__honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .contact__form button {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+
+  .contact__form-note {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-style: italic;
+    opacity: 0.45;
+  }
+
+  .contact__form-status {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 12px 14px;
+    border: 1px solid currentColor;
+  }
+
+  .contact__form-status[data-state='success'] {
+    color: var(--color-charcoal);
+    background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  }
+
+  .contact__form-status[data-state='error'] {
+    color: #b3261e;
+  }
+
+  .contact__info {
+    padding-top: 4px;
+  }
+
+  .contact__info-label {
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+
+  .contact__info-line {
+    font-size: 0.95rem;
+    padding: 12px 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .contact__tbd {
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  @media (max-width: 860px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
