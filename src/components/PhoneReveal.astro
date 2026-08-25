@@ -1,0 +1,216 @@
+---
+---
+
+<div class="phone-reveal" data-phone-reveal>
+  <div class="phone-reveal__track" data-track>
+    <span class="phone-reveal__label">Nous appeler →</span>
+    <button
+      type="button"
+      class="phone-reveal__thumb"
+      data-thumb
+      aria-label="Afficher le numéro de téléphone"
+    >→</button>
+  </div>
+  <p class="phone-reveal__result" data-result hidden></p>
+</div>
+
+<style>
+  .phone-reveal {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone-reveal__track {
+    position: relative;
+    width: 220px;
+    max-width: 100%;
+    height: 44px;
+    background: var(--color-offwhite);
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .phone-reveal__label {
+    position: absolute;
+    left: 50px;
+    right: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--color-charcoal);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .phone-reveal__thumb {
+    position: relative;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-black);
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+  }
+
+  .phone-reveal__thumb:active {
+    cursor: grabbing;
+  }
+
+  .phone-reveal__thumb:focus-visible {
+    outline: 2px solid var(--color-charcoal);
+    outline-offset: 2px;
+  }
+
+  .phone-reveal.is-dragging .phone-reveal__thumb {
+    transition: none;
+  }
+
+  .phone-reveal.is-revealed .phone-reveal__track {
+    display: none;
+  }
+
+  .phone-reveal__result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+  }
+
+  .phone-reveal__result a {
+    color: var(--color-charcoal);
+    border-bottom: 1px solid currentColor;
+  }
+
+  .phone-reveal__copy {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background: none;
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: var(--color-charcoal);
+    opacity: 0.7;
+  }
+
+  .phone-reveal__copy:hover {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  function initPhoneReveal(root: HTMLElement) {
+    const track = root.querySelector<HTMLElement>('[data-track]')!;
+    const thumb = root.querySelector<HTMLButtonElement>('[data-thumb]')!;
+    const result = root.querySelector<HTMLElement>('[data-result]')!;
+
+    const THUMB_SIZE = 32;
+    let dragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let maxX = 0;
+
+    function trackWidth() {
+      return track.clientWidth - THUMB_SIZE - 12;
+    }
+
+    function setThumbX(x: number) {
+      currentX = Math.max(0, Math.min(x, maxX));
+      thumb.style.transform = `translateX(${currentX}px)`;
+    }
+
+    function resetThumb() {
+      root.classList.remove('is-dragging');
+      setThumbX(0);
+    }
+
+    async function reveal() {
+      root.classList.add('is-revealed');
+      result.hidden = false;
+      result.textContent = 'Chargement…';
+
+      try {
+        const res = await fetch('/api/phone');
+        if (!res.ok) throw new Error('unavailable');
+        const { phone } = await res.json();
+
+        const link = document.createElement('a');
+        link.href = `tel:${phone.replace(/\s+/g, '')}`;
+        link.textContent = phone;
+
+        const copyBtn = document.createElement('button');
+        copyBtn.type = 'button';
+        copyBtn.className = 'phone-reveal__copy';
+        copyBtn.textContent = 'Copier';
+        copyBtn.addEventListener('click', async () => {
+          await navigator.clipboard.writeText(phone);
+          copyBtn.textContent = 'Copié !';
+          setTimeout(() => (copyBtn.textContent = 'Copier'), 1500);
+        });
+
+        result.replaceChildren(link, copyBtn);
+      } catch {
+        root.classList.remove('is-revealed');
+        resetThumb();
+        result.textContent = 'Indisponible pour le moment — écrivez-nous par email.';
+      }
+    }
+
+    thumb.addEventListener('pointerdown', (event) => {
+      dragging = true;
+      startX = event.clientX - currentX;
+      maxX = trackWidth();
+      root.classList.add('is-dragging');
+      thumb.setPointerCapture(event.pointerId);
+    });
+
+    thumb.addEventListener('pointermove', (event) => {
+      if (!dragging) return;
+      setThumbX(event.clientX - startX);
+    });
+
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      root.classList.remove('is-dragging');
+
+      if (maxX > 0 && currentX >= maxX * 0.85) {
+        reveal();
+      } else {
+        resetThumb();
+      }
+    }
+
+    thumb.addEventListener('pointerup', endDrag);
+    thumb.addEventListener('pointercancel', endDrag);
+
+    // Accessibilité : Entrée / Espace révèle directement, sans glisser.
+    thumb.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        reveal();
+      }
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-phone-reveal]').forEach(initPhoneReveal);
+</script>

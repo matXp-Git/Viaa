@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import PageIntro from '../components/PageIntro.astro';
 import Footer from '../components/Footer.astro';
+import PhoneReveal from '../components/PhoneReveal.astro';
 
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
@@ -60,7 +61,10 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
       <div class="contact__info">
         <p class="data-label contact__info-label">Coordonnées</p>
         <p class="contact__info-line">Email — <a href="mailto:contact@viia.pro">contact@viia.pro</a></p>
-        <p class="contact__info-line">Téléphone — <span class="contact__tbd">[à valider]</span></p>
+        <div class="contact__info-line">
+          <p class="contact__info-label-inline">Téléphone</p>
+          <PhoneReveal />
+        </div>
         <p class="contact__info-line">Adresse — 5 rue Gustave Nadaud, 59130 Lambersart</p>
       </div>
     </div>
@@ -205,9 +209,14 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
     border-top: 1px solid var(--color-line);
   }
 
-  .contact__tbd {
-    opacity: 0.5;
-    font-style: italic;
+  .contact__info-line:has(.phone-reveal) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact__info-label-inline {
+    font-size: 0.95rem;
   }
 
   @media (max-width: 860px) {
