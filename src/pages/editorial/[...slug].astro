@@ -50,6 +50,7 @@ const formattedDate = date.toLocaleDateString('fr-FR', {
   <article>
     <header class="article-hero">
       <div class="article-hero__text">
+        <a href="/editorial" class="link-arrow article-hero__back">← En savoir plus</a>
         <p class="eyebrow">{category}</p>
         <h1 class="article-hero__title">{title}</h1>
         <p class="article-hero__excerpt">{excerpt}</p>
@@ -106,6 +107,12 @@ const formattedDate = date.toLocaleDateString('fr-FR', {
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+  }
+
+  .article-hero__back {
+    margin-bottom: -8px;
+    opacity: 0.6;
+    align-self: flex-start;
   }
 
   .article-hero__title {
