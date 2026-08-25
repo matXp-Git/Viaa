@@ -3,13 +3,13 @@ title: "Pollution urbaine : la part invisible des déchets diffus"
 excerpt: "Au-delà des grandes filières de collecte, une pollution fragmentée s'accumule dans l'espace public. Diffuse, dispersée, elle échappe aux indicateurs classiques."
 coverImage: ./pollution-urbaine-dechets-diffus-cover.png
 coverImageAlt: "Déchets diffus dispersés le long d'une bande végétalisée urbaine"
-secondaryImage: ./pollution-urbaine-dechets-diffus-collecte-fin-journee.jpeg
-secondaryImageAlt: "Opérateur collectant des déchets diffus en fin de journée"
+secondaryImage: ./pollution-urbaine-dechets-diffus-collecte-fin-journee.png
+secondaryImageAlt: "Canettes et bouteille plastique abandonnées sur une avenue urbaine au crépuscule"
 date: 2026-09-22
 category: "Environnement"
 metaDescription: "Les déchets diffus forment une pollution urbaine fragmentée que les filières de collecte classiques ne captent pas. Enjeux et pistes de traitement."
 keywords: ["pollution urbaine", "déchets diffus", "environnement urbain", "propreté", "espace public"]
-draft: true
+draft: false
 ---
 
 ## La pollution urbaine ne se limite pas aux grandes filières

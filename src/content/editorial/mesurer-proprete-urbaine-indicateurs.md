@@ -9,7 +9,7 @@ date: 2026-10-13
 category: "Acteurs privés"
 metaDescription: "Les indicateurs classiques de propreté urbaine mesurent l'activité, pas le résultat. Comment évaluer l'état réel de l'espace public."
 keywords: ["propreté urbaine", "indicateurs propreté", "mesure propreté", "état de l'espace public", "pilotage"]
-draft: true
+draft: false
 ---
 
 ## Mesurer l'activité n'est pas mesurer le résultat

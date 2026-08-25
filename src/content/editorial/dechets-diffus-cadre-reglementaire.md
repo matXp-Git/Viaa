@@ -9,7 +9,7 @@ date: 2026-10-06
 category: "Réglementation"
 metaDescription: "Face aux déchets diffus sans auteur identifiable, la réglementation déplace la responsabilité vers le gestionnaire de l'espace. Ce que dit le droit."
 keywords: ["déchets diffus", "réglementation déchets", "dépôt sauvage", "responsabilité commune", "code de l'environnement"]
-draft: true
+draft: false
 ---
 
 ## Quand le déchet n'a plus d'auteur, la responsabilité change de camp

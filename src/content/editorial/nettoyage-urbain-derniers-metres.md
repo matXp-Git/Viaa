@@ -9,7 +9,7 @@ date: 2026-09-15
 category: "Terrain"
 metaDescription: "Le nettoyage urbain classique couvre la voirie principale mais laisse des zones interstitielles. Comment les traiter sur les derniers mètres."
 keywords: ["nettoyage urbain", "propreté urbaine", "voirie", "déchets diffus", "dernier kilomètre"]
-draft: true
+draft: false
 ---
 
 ## Le nettoyage urbain s'arrête souvent avant la fin

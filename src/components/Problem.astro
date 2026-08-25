@@ -1,12 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+import dechetsDiffusImage from '../assets/dechets-diffus.png';
 ---
 
 <section class="problem">
   <div class="problem__visual">
-    <span class="problem__visual-label data-label">Visuel à venir<br />Déchets diffus — abords urbains</span>
+    <Image
+      src={dechetsDiffusImage}
+      alt="Canettes et bouteille plastique abandonnées sur une avenue urbaine au crépuscule"
+      width={1536}
+      height={768}
+    />
+    <div class="problem__scrim"></div>
   </div>
-
-  <div class="problem__scrim"></div>
 
   <div class="container problem__content">
     <p class="eyebrow eyebrow--light">02</p>
@@ -36,29 +42,20 @@
   .problem__visual {
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-      135deg,
-      var(--color-charcoal),
-      var(--color-charcoal) 1px,
-      var(--color-black) 1px,
-      var(--color-black) 14px
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--color-black);
   }
 
-  .problem__visual-label {
-    color: var(--color-white);
-    opacity: 0.5;
-    text-align: center;
-    line-height: 1.6;
+  .problem__visual :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
   }
 
   .problem__scrim {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(23, 24, 26, 0.92) 0%, rgba(23, 24, 26, 0.35) 65%, rgba(23, 24, 26, 0.35) 100%);
+    background: linear-gradient(180deg, rgba(23, 24, 26, 1) 0%, rgba(23, 24, 26, 0.2) 100%);
   }
 
   .problem__content {

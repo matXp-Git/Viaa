@@ -1,7 +1,7 @@
 ---
 title: "Entreprise de nettoyage de ville : quel rôle face aux angles morts de la propreté ?"
 excerpt: "Entre les services de propreté publique et les zones qu'ils ne couvrent pas, une entreprise de nettoyage urbain intervient sur un segment précis. Illustration dans le Nord."
-coverImage: ./entreprise-nettoyage-ville-nord-cover.jpeg
+coverImage: ./entreprise-nettoyage-ville-nord-cover.png
 coverImageAlt: "Opérateur d'une entreprise de nettoyage urbain en intervention de nuit"
 secondaryImage: ./entreprise-nettoyage-ville-nord-equipe-briefing.png
 secondaryImageAlt: "Équipe en briefing avant une tournée d'intervention"
@@ -9,7 +9,7 @@ date: 2026-09-29
 category: "Collectivités"
 metaDescription: "Une entreprise de nettoyage de ville complète les services publics sur les zones qu'ils ne couvrent pas. Rôle, périmètre et exemple dans le Nord."
 keywords: ["entreprise de nettoyage urbain", "nettoyage ville", "nettoyage urbain Nord", "propreté urbaine", "collectivités"]
-draft: true
+draft: false
 ---
 
 ## Une entreprise de nettoyage de ville n'a pas vocation à tout faire
