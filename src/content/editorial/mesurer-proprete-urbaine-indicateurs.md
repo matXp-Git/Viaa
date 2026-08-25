@@ -5,7 +5,7 @@ coverImage: ./mesurer-proprete-urbaine-indicateurs-cover.png
 coverImageAlt: "Opérateur relevant l'état d'une zone avant intervention"
 secondaryImage: ./mesurer-proprete-urbaine-indicateurs-releve-terrain.png
 secondaryImageAlt: "Fiche de relevé terrain posée sur une zone d'intervention"
-date: 2026-10-13
+date: 2026-08-25
 category: "Acteurs privés"
 metaDescription: "Les indicateurs classiques de propreté urbaine mesurent l'activité, pas le résultat. Comment évaluer l'état réel de l'espace public."
 keywords: ["propreté urbaine", "indicateurs propreté", "mesure propreté", "état de l'espace public", "pilotage"]

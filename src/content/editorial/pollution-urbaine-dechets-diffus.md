@@ -5,7 +5,7 @@ coverImage: ./pollution-urbaine-dechets-diffus-cover.png
 coverImageAlt: "Déchets diffus dispersés le long d'une bande végétalisée urbaine"
 secondaryImage: ./pollution-urbaine-dechets-diffus-collecte-fin-journee.png
 secondaryImageAlt: "Canettes et bouteille plastique abandonnées sur une avenue urbaine au crépuscule"
-date: 2026-09-22
+date: 2026-08-22
 category: "Environnement"
 metaDescription: "Les déchets diffus forment une pollution urbaine fragmentée que les filières de collecte classiques ne captent pas. Enjeux et pistes de traitement."
 keywords: ["pollution urbaine", "déchets diffus", "environnement urbain", "propreté", "espace public"]

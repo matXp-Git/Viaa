@@ -5,7 +5,7 @@ coverImage: ./entreprise-nettoyage-ville-nord-cover.png
 coverImageAlt: "Opérateur d'une entreprise de nettoyage urbain en intervention de nuit"
 secondaryImage: ./entreprise-nettoyage-ville-nord-equipe-briefing.png
 secondaryImageAlt: "Équipe en briefing avant une tournée d'intervention"
-date: 2026-09-29
+date: 2026-08-23
 category: "Collectivités"
 metaDescription: "Une entreprise de nettoyage de ville complète les services publics sur les zones qu'ils ne couvrent pas. Rôle, périmètre et exemple dans le Nord."
 keywords: ["entreprise de nettoyage urbain", "nettoyage ville", "nettoyage urbain Nord", "propreté urbaine", "collectivités"]

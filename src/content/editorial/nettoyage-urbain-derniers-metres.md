@@ -5,7 +5,7 @@ coverImage: ./nettoyage-urbain-derniers-metres-cover.png
 coverImageAlt: "Opérateur en intervention sur un rond-point en fin de journée"
 secondaryImage: ./nettoyage-urbain-derniers-metres-zone-intervention.png
 secondaryImageAlt: "Pied de mobilier urbain avant nettoyage, déchets accumulés"
-date: 2026-09-15
+date: 2026-08-21
 category: "Terrain"
 metaDescription: "Le nettoyage urbain classique couvre la voirie principale mais laisse des zones interstitielles. Comment les traiter sur les derniers mètres."
 keywords: ["nettoyage urbain", "propreté urbaine", "voirie", "déchets diffus", "dernier kilomètre"]

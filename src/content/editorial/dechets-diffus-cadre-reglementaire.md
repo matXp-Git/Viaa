@@ -5,7 +5,7 @@ coverImage: ./dechets-diffus-cadre-reglementaire-cover.png
 coverImageAlt: "Panneau d'interdiction de dépôt de déchets sur une voie communale"
 secondaryImage: ./dechets-diffus-cadre-reglementaire-intervention-communale.png
 secondaryImageAlt: "Agents en intervention sur une zone de dépôt en bord de voie"
-date: 2026-10-06
+date: 2026-08-24
 category: "Réglementation"
 metaDescription: "Face aux déchets diffus sans auteur identifiable, la réglementation déplace la responsabilité vers le gestionnaire de l'espace. Ce que dit le droit."
 keywords: ["déchets diffus", "réglementation déchets", "dépôt sauvage", "responsabilité commune", "code de l'environnement"]
