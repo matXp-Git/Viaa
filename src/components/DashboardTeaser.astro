@@ -1,0 +1,147 @@
+---
+import { Image } from 'astro:assets';
+import dashboardImage from '../assets/dashboard-preview.png';
+
+const features = [
+  'Zones traitées, en direct',
+  'Quantités ramassées et recyclées',
+  "Dates prévues d'intervention",
+  'Zones à surveiller relevées par nos opérateurs — déchets sauvages, problèmes de voirie...',
+];
+---
+
+<section class="dashboard-teaser">
+  <div class="dashboard-teaser__grid">
+    <div class="dashboard-teaser__content">
+      <p class="eyebrow eyebrow--light">06</p>
+      <h2 class="dashboard-teaser__title">Votre Dashboard Viia</h2>
+
+      <p class="dashboard-teaser__lead">
+        Suivez au jour le jour dans votre dashboard les missions confiées à Viia.
+      </p>
+
+      <ul class="dashboard-teaser__list">
+        {features.map((feature) => (
+          <li>{feature}</li>
+        ))}
+      </ul>
+
+      <p class="dashboard-teaser__closing">
+        Éditez vos rapports pour les insérer directement dans vos présentations.
+      </p>
+    </div>
+
+    <div class="dashboard-teaser__visual">
+      <Image
+        src={dashboardImage}
+        alt="Aperçu du dashboard Viia — kilos collectés, taux de recyclage et tracé GPS d'une mission"
+        width={1716}
+        height={1376}
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .dashboard-teaser {
+    background: var(--color-black);
+    color: var(--color-white);
+    overflow: hidden;
+    border-top: 1px solid var(--color-line-dark);
+  }
+
+  .dashboard-teaser__grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: stretch;
+    min-height: 480px;
+  }
+
+  .dashboard-teaser__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 48px) clamp(32px, 5vw, 56px)
+      max(var(--gutter), calc((100vw - var(--container-max)) / 2 + var(--gutter)));
+  }
+
+  .eyebrow--light {
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+
+  .dashboard-teaser__title {
+    margin-top: 12px;
+    font-size: clamp(2rem, 3.6vw, 2.6rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .dashboard-teaser__lead {
+    margin-top: 8px;
+    max-width: 46ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .dashboard-teaser__list {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dashboard-teaser__list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    opacity: 0.8;
+  }
+
+  .dashboard-teaser__list li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .dashboard-teaser__closing {
+    margin-top: auto;
+    padding-top: 20px;
+    font-size: 1.02rem;
+    opacity: 0.55;
+  }
+
+  .dashboard-teaser__visual {
+    position: relative;
+    min-height: 320px;
+  }
+
+  .dashboard-teaser__visual :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  @media (max-width: 900px) {
+    .dashboard-teaser__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dashboard-teaser__content {
+      padding-right: var(--gutter);
+    }
+
+    .dashboard-teaser__visual {
+      min-height: 280px;
+    }
+  }
+</style>
