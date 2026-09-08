@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import festivalImage from '../assets/Festival-viia.png';
+---
+
+<section class="event">
+  <div class="event__grid">
+    <div class="event__content">
+      <p class="eyebrow eyebrow--light">Organisateurs d'événements</p>
+      <h2 class="event__title">Votre événement, propre du début à la fin.</h2>
+
+      <p class="event__lead">
+        Vous devez gérer les déchets de votre événement, sans faire de compromis sur le respect de
+        vos visiteurs et de l'environnement ?
+      </p>
+
+      <p class="event__text">
+        Viia vous accompagne en amont : votre contact dédié vous conseille sur la méthode de
+        collecte la plus adaptée à votre événement. En aval, vous recevez un rapport complet —
+        déchets collectés, part recyclée — réutilisable dans votre communication.
+      </p>
+
+      <a href="/contact" class="btn btn-accent event__cta">On en discute ? →</a>
+    </div>
+
+    <div class="event__visual">
+      <Image
+        src={festivalImage}
+        alt="Foule à un festival au coucher du soleil, poubelles débordantes et déchets au sol au premier plan"
+        width={960}
+        height={1200}
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .event {
+    background: var(--color-black);
+    color: var(--color-white);
+    overflow: hidden;
+  }
+
+  .event__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: stretch;
+    min-height: 420px;
+  }
+
+  .event__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 48px) clamp(32px, 5vw, 56px)
+      max(var(--gutter), calc((100vw - var(--container-max)) / 2 + var(--gutter)));
+  }
+
+  .eyebrow--light {
+    color: var(--color-white);
+    opacity: 0.8;
+  }
+
+  .event__title {
+    margin-top: 12px;
+    font-size: clamp(2rem, 3.6vw, 2.6rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+    max-width: 14ch;
+  }
+
+  .event__lead {
+    margin-top: 16px;
+    max-width: 46ch;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 700;
+  }
+
+  .event__text {
+    margin-top: 12px;
+    max-width: 48ch;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .event__cta {
+    margin-top: 24px;
+    align-self: flex-start;
+  }
+
+  .event__visual {
+    position: relative;
+    min-height: 320px;
+    background: var(--color-black);
+  }
+
+  .event__visual :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
+  }
+
+  @media (max-width: 900px) {
+    .event__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .event__content {
+      padding-right: var(--gutter);
+    }
+
+    .event__visual {
+      min-height: 240px;
+    }
+  }
+</style>

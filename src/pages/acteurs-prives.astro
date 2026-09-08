@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import PageIntro from '../components/PageIntro.astro';
 import ChecklistSection from '../components/ChecklistSection.astro';
+import EventSection from '../components/EventSection.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import Footer from '../components/Footer.astro';
 import acteursPrivesImage from '../assets/acteurs-prives-intro.png';
@@ -44,6 +45,8 @@ const items = [
   </PageIntro>
 
   <ChecklistSection eyebrow="Bénéfices" title="Avec Viia Pick, vous pouvez :" items={items} />
+
+  <EventSection />
 
   <CtaBanner text="Parlez-nous de votre site." ctaLabel="Demander un devis →" ctaHref="/contact" />
 
