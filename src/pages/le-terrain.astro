@@ -31,6 +31,66 @@ const stats = [
     </p>
   </PageIntro>
 
+  <section class="contracts">
+    <div class="container">
+      <p class="eyebrow">Contrats</p>
+      <h2 class="contracts__title">Deux façons de rejoindre le terrain.</h2>
+      <p class="contracts__intro">
+        Viia propose deux types de contrats à ses opérateurs terrain. <strong>Viia Core</strong> :
+        un contrat d'heures avec planning d'équipe. <strong>Viia Flex</strong> : une formule souple
+        de prestataire, pour adapter votre activité à vos disponibilités.
+      </p>
+
+      <div class="contracts__table-wrap">
+        <table class="contracts__table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Avantages</th>
+              <th scope="col">Inconvénients</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Viia Core</th>
+              <td>
+                <ul>
+                  <li>Nombre d'heures fixe</li>
+                  <li>Durée de contrat convenue</li>
+                  <li>Congés payés</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Taux horaire réglementé</li>
+                  <li>Horaires imposés</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Viia Flex</th>
+              <td>
+                <ul>
+                  <li>Adaptable à votre vie personnelle</li>
+                  <li>Taux horaire élevé</li>
+                  <li>Pas de limite d'heures</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Activité dépendante de la demande</li>
+                  <li>Nécessite une forte autonomie</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="contracts__signature">One Team. One Mission. Cleaner Spaces.</p>
+    </div>
+  </section>
+
   <section class="stats">
     <div class="container">
       <p class="eyebrow">Objectifs</p>
@@ -64,6 +124,105 @@ const stats = [
 </Layout>
 
 <style>
+  .contracts {
+    padding-block: clamp(56px, 8vw, 88px);
+    border-top: 1px solid var(--color-line);
+  }
+
+  .contracts__title {
+    margin-top: 16px;
+    font-size: clamp(1.6rem, 2.6vw, 2rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    max-width: 640px;
+  }
+
+  .contracts__intro {
+    margin-top: 16px;
+    max-width: 68ch;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .contracts__intro strong {
+    color: var(--color-charcoal);
+    font-weight: 700;
+  }
+
+  .contracts__table-wrap {
+    margin-top: clamp(32px, 5vw, 48px);
+    overflow-x: auto;
+  }
+
+  .contracts__table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .contracts__table th,
+  .contracts__table td {
+    text-align: left;
+    padding: 14px 16px;
+    border-top: 1px solid var(--color-line);
+    vertical-align: top;
+  }
+
+  .contracts__table thead th {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.55;
+    font-weight: 500;
+    border-top: none;
+    padding-bottom: 8px;
+  }
+
+  .contracts__table tbody th {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    white-space: nowrap;
+    padding-left: 0;
+  }
+
+  .contracts__table td:first-of-type {
+    padding-left: 16px;
+  }
+
+  .contracts__table tbody tr:last-child th,
+  .contracts__table tbody tr:last-child td {
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .contracts__table ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contracts__table li {
+    line-height: 1.5;
+    opacity: 0.85;
+  }
+
+  .contracts__signature {
+    margin-top: clamp(32px, 5vw, 48px);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-charcoal);
+    opacity: 0.6;
+  }
+
   .stats {
     padding-block: clamp(56px, 8vw, 88px);
     border-top: 1px solid var(--color-line);
