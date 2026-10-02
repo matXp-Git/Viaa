@@ -5,7 +5,7 @@ coverImage: ./proprete-zones-activité-cover.jpg
 coverImageAlt: "Abords et parking d'une zone d'activité avec déchets accumulés en bordure"
 secondaryImage: ./intervention-parking-za.jpg
 secondaryImageAlt: "Opérateur nettoyant les espaces communs extérieurs d'une zone d'activité"
-date: 2026-11-17
+date: 2026-10-01
 category: "Acteurs privés"
 metaDescription: "La propreté extérieure d'une zone d'activité — voiries, parkings, abords — relève des espaces communs souvent délaissés. Enjeux, responsabilités et méthode."
 keywords: ["propreté zone d'activité", "nettoyage zone d'activité", "espaces communs", "abords entreprise", "déchets diffus"]

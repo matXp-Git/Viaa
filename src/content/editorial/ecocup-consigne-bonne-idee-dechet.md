@@ -5,7 +5,7 @@ coverImage: ./ecocup_consigne_cover.jpg
 coverImageAlt: "Gobelets réutilisables abandonnés au sol après un événement de rue"
 secondaryImage: ./stand-consigne.jpg
 secondaryImageAlt: "Point de consigne de gobelets sur un stand de restauration"
-date: 2026-11-03
+date: 2026-09-29
 category: "Environnement"
 metaDescription: "L'écocup ne réduit les déchets que si elle est reprise et réutilisée. Sans consigne réelle, la bonne idée écologique se retourne en pollution."
 keywords: ["écocup", "gobelet réutilisable", "consigne gobelet", "déchets événement", "Braderie de Lille"]

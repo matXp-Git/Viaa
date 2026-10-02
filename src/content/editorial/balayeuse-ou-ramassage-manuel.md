@@ -5,7 +5,7 @@ coverImage: ./agregat-balayeuse-cover.jpg
 coverImageAlt: "Opérateur effectuant un ramassage manuel ciblé à la pince en fin de journée"
 secondaryImage: ./agregat-balayeuse.jpg
 secondaryImageAlt: "Agrégat de déchets mélangés issu d'une balayeuse mécanique"
-date: 2026-10-20
+date: 2026-09-27
 category: "Terrain"
 metaDescription: "Balayeuse ou ramassage manuel : le tri en amont change la valorisation des déchets et déplace le coût réel de la collecte vers le traitement."
 keywords: ["balayeuse ou ramassage manuel", "ramassage manuel déchets", "piquage", "tri en amont", "coût de traitement des déchets"]

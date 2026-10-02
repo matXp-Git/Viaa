@@ -5,7 +5,7 @@ coverImage: ./nettoyage-voirie-cover.jpg
 coverImageAlt: "Entrée de zone d'activité en bordure de voie rapide, déchets accumulés"
 secondaryImage: ./voie-secondaire.jpg
 secondaryImageAlt: "Opérateur en intervention sur un accès routier en fin de journée"
-date: 2026-10-27
+date: 2026-09-28
 category: "Terrain"
 metaDescription: "Le nettoyage de voirie ne se limite pas au propre visible. Voies délaissées, tri des déchets et enjeux durables : sols, eau, microplastiques."
 keywords: ["nettoyage voirie", "voies secondaires", "propreté durable", "microplastiques", "tri des déchets voirie"]

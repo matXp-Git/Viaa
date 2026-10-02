@@ -5,7 +5,7 @@ coverImage: ./villes-propres-cover.jpg
 coverImageAlt: "Piste cyclable séparée de la chaussée par une haie végétalisée en ville"
 secondaryImage: ./nettoyage-piste-cyclable.jpg
 secondaryImageAlt: "Opérateur nettoyant une bande étroite entre haie et piste cyclable"
-date: 2026-11-10
+date: 2026-09-30
 category: "Collectivités"
 metaDescription: "Pistes cyclables, végétalisation, trottoirs protégés : ces aménagements multiplient les zones à nettoyer et compliquent la mécanisation. Enjeux pour les villes."
 keywords: ["villes propres", "aménagements urbains", "pistes cyclables", "végétalisation", "nettoyage espace public"]
