@@ -16,7 +16,7 @@ draft: false
 
 Dans une zone d'activité, chaque entreprise entretient l'intérieur de ses murs : ateliers, entrepôts, bureaux. C'est le nettoyage industriel classique, bien identifié et bien pourvu en prestataires. Mais la propreté d'une zone d'activité ne se joue pas à l'intérieur des bâtiments — elle se joue **dehors**, sur les espaces que personne ne revendique vraiment : voiries internes, parkings mutualisés, abords, espaces verts, points d'apport de déchets.
 
-Ces espaces communs extérieurs sont le premier facteur d'image d'une zone, et pourtant les moins clairement pris en charge. Chacun estime que c'est l'affaire d'un autre — la commune, le voisin, le gestionnaire de la zone — et le déchet s'accumule dans cet angle mort de responsabilité.
+Ces espaces communs extérieurs sont le premier facteur d'image d'une zone, et pourtant les moins clairement pris en charge. Chacun estime que c'est l'affaire d'un autre — la commune, le voisin, le gestionnaire de la zone — et le déchet s'accumule dans cet angle mort de responsabilité. **[Notre article sur la pollution urbaine.](/editorial/pollution-urbaine-dechets-diffus)**
 
 ## Une zone d'activité génère une salissure spécifique
 
@@ -32,7 +32,7 @@ Une zone d'activité, c'est de grands parkings, de larges voiries et des abords 
 
 ### Des zones de jonction sans gestionnaire clair
 
-Entre la voirie communale, les parcelles privées des entreprises et les espaces communs de la zone, les limites de responsabilité sont floues. Ces zones de jonction — bas-côtés, délaissés, entrées — sont précisément celles où le déchet s'accumule, faute de savoir à qui incombe leur entretien.
+Entre la voirie communale, les parcelles privées des entreprises et les espaces communs de la zone, les limites de responsabilité sont floues. Ces zones de jonction — bas-côtés, délaissés, entrées — sont précisément celles où le déchet s'accumule, faute de savoir à qui incombe leur entretien. [Notre article sur le nettoyage des villes.](/editorial/entreprise-nettoyage-ville-nord)
 
 ## Le coût caché d'une zone qui se dégrade
 
@@ -54,12 +54,21 @@ Ce flou a un coût organisationnel réel. Tant que la responsabilité n'est pas 
 
 ## Traiter l'extérieur d'une zone comme un segment à part
 
-L'entretien extérieur d'une zone d'activité relève d'une logique distincte du nettoyage des locaux, et suppose une méthode adaptée à ses spécificités.
+L'entretien extérieur d'une zone d'activité relève d'une logique distincte du nettoyage des locaux, et suppose une méthode adaptée à ses spécificités. **[Notre article sur les types de nettoyage urbain.](/editorial/balayeuse-ou-ramassage-manuel)**
 
 Cela commence par **cibler les points de concentration** — clôtures sous le vent, bas de haies, entrées, abords des points d'apport — plutôt que de traiter uniformément de vastes surfaces majoritairement propres. Cela suppose ensuite un **tri à la source** : les déchets d'une zone d'activité sont en grande partie des emballages recyclables, qu'il serait absurde d'envoyer en mélange à l'enfouissement alors qu'ils sont collectables propres. Cela implique enfin de **documenter** l'intervention, pour que le gestionnaire et les entreprises de la zone puissent vérifier le service rendu et ajuster les passages au rythme réel de salissure.
 
-Cette approche ciblée, mesurée et orientée valorisation est ce qui distingue un entretien pertinent d'un simple passage de balayeuse qui déplace le problème sans le traiter.
+Cette approche ciblée, mesurée et orientée valorisation est ce qui distingue un entretien pertinent d'un simple passage de balayeuse qui déplace le problème sans le traiter. **[Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)**
 
 ## La propreté extérieure, un atout collectif
 
-La propreté d'une zone d'activité est un bien commun : elle profite à toutes les entreprises implantées, mais ne se maintient que si quelqu'un en assume clairement la charge. Sortir de l'angle mort de responsabilité, confier l'entretien des espaces communs à un dispositif dédié, et le piloter sur des données réelles : voilà ce qui transforme une zone qui se dégrade en une zone qui tient dans la durée. L'extérieur d'une zone d'activité n'est le terrain de personne en particulier — raison de plus pour en faire l'affaire d'un acteur identifié.
+La propreté d'une zone d'activité est un bien commun : elle profite à toutes les entreprises implantées, mais ne se maintient que si quelqu'un en assume clairement la charge. Sortir de l'angle mort de responsabilité, confier l'entretien des espaces communs à un dispositif dédié, et le piloter sur des données réelles : voilà ce qui transforme une zone qui se dégrade en une zone qui tient dans la durée. L'extérieur d'une zone d'activité n'est le terrain de personne en particulier — raison de plus pour en faire l'affaire d'un acteur identifié. **[Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)**
+
+
+## À lire aussi
+
+- [Notre article sur la pollution urbaine.](/editorial/pollution-urbaine-dechets-diffus)
+- [Notre article sur les types de nettoyage urbain.](/editorial/balayeuse-ou-ramassage-manuel)
+- [Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)
+- [Notre article sur le nettoyage des villes.](/editorial/entreprise-nettoyage-ville-nord)
+- [Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)

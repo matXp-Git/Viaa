@@ -33,9 +33,9 @@ Cette nature dispersée explique pourquoi il échappe aux dispositifs pensés po
 
 Comprendre la pollution diffuse suppose de remonter à sa source, car elle ne se dépose pas au hasard. Elle suit des logiques de flux et de comportements qui expliquent sa concentration sur certaines zones plutôt que d'autres.
 
-Une part vient de la **consommation nomade** : ce qui se mange, se boit et se fume dans l'espace public, et dont l'emballage est abandonné sur place faute de corbeille à proximité immédiate. Une autre part provient des **flux de circulation** : déchets éjectés depuis les véhicules, qui s'accumulent le long des axes et sur les abords routiers. S'y ajoutent les **débordements de corbeilles** saturées et les déchets emportés par le vent depuis les points de collecte.
+Une part vient de la **consommation nomade** : ce qui se mange, se boit et se fume dans l'espace public, et dont l'emballage est abandonné sur place faute de corbeille à proximité immédiate. Une autre part provient des **flux de circulation** : déchets éjectés depuis les véhicules, qui s'accumulent le long des axes et sur les abords routiers. S'y ajoutent les **débordements de corbeilles** saturées et les déchets emportés par le vent depuis les points de collecte. 
 
-Ces origines ont un point commun : elles produisent un déchet en mouvement, qui se disperse loin de son point d'émission. C'est ce déplacement qui rend la source si difficile à traiter — on ne peut pas installer une corbeille à chaque endroit où un déchet finit sa course.
+Ces origines ont un point commun : elles produisent un déchet en mouvement, qui se disperse loin de son point d'émission. C'est ce déplacement qui rend la source si difficile à traiter — on ne peut pas installer une corbeille à chaque endroit où un déchet finit sa course. **[Notre article sur le nettoyage de la voirie.](/editorial/nettoyage-urbain-derniers-metres)**
 
 ## Une pollution qui n'apparaît pas dans les indicateurs
 
@@ -63,12 +63,19 @@ Même traité, il revient. Sans logique de récurrence — savoir quelles zones 
 
 ## Un enjeu environnemental autant que visuel
 
-La pollution diffuse n'est pas seulement une question de propreté perçue. Les petits déchets abandonnés au sol suivent un cycle qui a des conséquences environnementales réelles. Emportés par le ruissellement, ils rejoignent les grilles d'évacuation, puis les cours d'eau. Les plastiques les plus fins se fragmentent avec le temps et deviennent quasiment impossibles à récupérer une fois disséminés.
+La pollution diffuse n'est pas seulement une question de propreté perçue. Les petits déchets abandonnés au sol suivent un cycle qui a des conséquences environnementales réelles. Emportés par le ruissellement, ils rejoignent les grilles d'évacuation, puis les cours d'eau. Les plastiques les plus fins se fragmentent avec le temps et deviennent quasiment impossibles à récupérer une fois disséminés. **[Notre article sur les microplastiques](/editorial/fauchage-bords-route-microplastiques)**
 
 Autrement dit, un déchet diffus non traité dans la rue ne disparaît pas : il se déplace et se fragmente. Ce qui n'est pas collecté à la source finit par polluer un milieu où sa récupération est encore plus difficile, quand elle reste possible. Traiter tôt, au plus près du point d'abandon, est le moment où l'intervention reste la plus efficace.
 
 ## Traiter la pollution diffuse suppose de la documenter
 
-Face à une pollution invisible dans les indicateurs, la première étape est de la rendre mesurable. Cartographier les zones de concentration, relever les volumes réels, suivre la fréquence de réapparition : ces données transforment un ressenti diffus en un objet pilotable.
+Face à une pollution invisible dans les indicateurs, la première étape est de la rendre mesurable. Cartographier les zones de concentration, relever les volumes réels, suivre la fréquence de réapparition : ces données transforment un ressenti diffus en un objet pilotable. **[Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)**
 
 C'est cette documentation qui permet ensuite d'agir juste — au bon endroit, au bon rythme — plutôt que d'ajouter des passages à l'aveugle. La pollution diffuse ne se résout pas en faisant plus, mais en voyant mieux ce qui, jusqu'ici, échappait à la mesure.
+
+
+## À lire aussi
+
+- [Notre article sur le nettoyage de la voirie.](/editorial/nettoyage-urbain-derniers-metres)
+- [Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)
+- [Notre article sur les microplastiques](/editorial/fauchage-bords-route-microplastiques)

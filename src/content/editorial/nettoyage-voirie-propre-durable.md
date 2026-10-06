@@ -14,13 +14,13 @@ draft: false
 
 ## Le nettoyage de voirie ne se joue pas là où on le regarde
 
-Quand on parle de nettoyage de voirie, on pense d'abord aux grands axes : boulevards, avenues, artères passantes. Ce sont eux qui reçoivent le plus d'attention, et ils sont souvent **relativement propres** — parce que visibles, empruntés par tous, et prioritaires dans les tournées. Le vrai déficit de propreté se situe ailleurs : sur les voies secondaires et les points d'accès que personne ne surveille vraiment.
+Quand on parle de nettoyage de voirie, on pense d'abord aux grands axes : boulevards, avenues, artères passantes. Ce sont eux qui reçoivent le plus d'attention, et ils sont souvent **relativement propres** — parce que visibles, empruntés par tous, et prioritaires dans les tournées. Le vrai déficit de propreté se situe ailleurs : sur les voies secondaires et les points d'accès que personne ne surveille vraiment. **[Notre article sur le nettoyage des villes.](/editorial/entreprise-nettoyage-ville-nord)**
 
 Entrées de ville, sorties de voies rapides, bretelles, abords de zones d'activité : ces espaces concentrent une salissure durable, précisément parce qu'ils échappent à l'attention portée aux axes principaux. Et sur ces zones, le problème n'est pas seulement qu'elles soient sales — c'est la manière dont on les nettoie qui pose question.
 
 ## La hiérarchie invisible des voies
 
-Toutes les voies ne sont pas traitées avec la même intensité, et cette hiérarchie de fait crée des angles morts prévisibles.
+Toutes les voies ne sont pas traitées avec la même intensité, et cette hiérarchie de fait crée des angles morts prévisibles. **[Notre article sur le nettoyage de la voirie.](/editorial/nettoyage-urbain-derniers-metres)**
 
 ### Les voies principales : sous surveillance
 
@@ -54,7 +54,7 @@ C'est le versant que le nettoyage de surface ignore. Les déchets abandonnés su
 
 Ces fragments suivent ensuite un chemin invisible mais direct : emportés par les eaux de pluie, ils rejoignent les grilles d'évacuation, puis les sols et les cours d'eau. Une fois dispersés à cette échelle, ils sont pratiquement impossibles à récupérer. Le déchet qu'on n'a pas retiré à temps sur une bretelle d'accès devient une pollution diffuse des milieux, bien après avoir cessé d'être visible.
 
-Traiter la voirie durablement, c'est donc intervenir **avant** cette fragmentation : retirer le déchet propre tant qu'il est encore un déchet, et non une fois qu'il est devenu une contamination du sol et de l'eau. Le nettoyage cesse alors d'être un geste esthétique pour devenir une action de préservation des milieux.
+Traiter la voirie durablement, c'est donc intervenir **avant** cette fragmentation : retirer le déchet propre tant qu'il est encore un déchet, et non une fois qu'il est devenu une contamination du sol et de l'eau. Le nettoyage cesse alors d'être un geste esthétique pour devenir une action de préservation des milieux. **[Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)**
 
 ## La porte d'entrée d'un territoire, et la juste méthode
 
@@ -62,6 +62,14 @@ Il y a une raison supplémentaire, souvent sous-estimée, de ne pas négliger ce
 
 Pour une collectivité comme pour une zone d'activité, cette première image pèse sur l'attractivité bien au-delà de son coût de traitement. Un territoire peut soigner son centre et ses axes tout en donnant, à ses portes, un signal d'abandon qui contredit tout le reste. Le paradoxe est cruel : on investit sur ce qui est déjà propre, et on laisse se dégrader ce qui forme le premier contact.
 
-La réponse n'est pas d'abandonner la balayeuse — elle reste pertinente sur les grands linéaires. C'est de reconnaître que les voies secondaires, accès et entrées de zones relèvent d'un traitement différent : ciblé, avec un tri à la source qui préserve la valorisation, et pensé pour l'enjeu long terme autant que pour l'apparence.
+La réponse n'est pas d'abandonner la balayeuse — elle reste pertinente sur les grands linéaires. C'est de reconnaître que les voies secondaires, accès et entrées de zones relèvent d'un traitement différent : ciblé, avec un tri à la source qui préserve la valorisation, et pensé pour l'enjeu long terme autant que pour l'apparence. **[Notre article sur les microplastiques](/editorial/fauchage-bords-route-microplastiques)**
 
 Un nettoyage de voirie complet articule donc deux exigences : le propre visible, qui répond à la perception immédiate, et le propre durable, qui protège les sols et l'eau sur la durée. Les deux ne s'opposent pas — mais seul le second traite le déchet pour ce qu'il est vraiment : non pas une gêne visuelle à faire disparaître, mais une matière à retirer avant qu'elle ne contamine ce qui ne se nettoie plus.
+
+
+## À lire aussi
+
+- [Notre article sur le nettoyage des villes.](/editorial/entreprise-nettoyage-ville-nord)
+- [Notre article sur le nettoyage de la voirie.](/editorial/nettoyage-urbain-derniers-metres)
+- [Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)
+- [Notre article sur les microplastiques](/editorial/fauchage-bords-route-microplastiques)

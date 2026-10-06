@@ -36,7 +36,7 @@ Le paradoxe est total : le dispositif censé garantir le retour est neutralisé 
 
 ## Quand le réutilisable pollue plus que le jetable
 
-Reste la question de ce que devient le gobelet une fois au sol. Et sur ce point, un constat de terrain mérite attention. L'écocup est fabriquée en polypropylène (PP), un plastique rigide conçu pour résister à des dizaines de lavages. Cette rigidité est une qualité pour la réutilisation — mais un défaut une fois le gobelet abandonné et piétiné.
+Reste la question de ce que devient le gobelet une fois au sol. Et sur ce point, un constat de terrain mérite attention. L'écocup est fabriquée en polypropylène (PP), un plastique rigide conçu pour résister à des dizaines de lavages. Cette rigidité est une qualité pour la réutilisation — mais un défaut une fois le gobelet abandonné et piétiné. **[Notre article sur le nettoyage urbain.](/editorial/nettoyage-voirie-propre-durable)**
 
 Là où un gobelet jetable souple s'écrase et reste d'un seul tenant, un écocup rigide soumis au piétinement d'une foule tend à se **fendre et se fragmenter**. Un déchet unique et compact devient alors plusieurs morceaux dispersés, plus difficiles à ramasser et plus prompts à se disséminer. Ce phénomène, observé lors de la Braderie de Lille comme sur d'autres événements très fréquentés, illustre une mécanique connue : un plastique rigide fragmenté est le point de départ de la dispersion en petits éclats, puis à terme en microplastiques emportés par le ruissellement.
 
@@ -46,8 +46,14 @@ Autrement dit, le gobelet réutilisable non repris ne se contente pas de ne pas 
 
 Ce cas n'est pas une critique de l'écocup en soi — le dispositif fonctionne remarquablement quand ses conditions sont réunies : consigne réelle, gobelets différenciés, reprise organisée, logistique de lavage. Il illustre une règle plus large : **une solution écologique ne vaut que par les conditions concrètes de sa mise en œuvre.** Un bon principe appliqué sans son mécanisme de retour produit l'inverse de l'effet recherché.
 
-Pour le nettoyage d'un événement, cela a des conséquences directes. Les déchets laissés au sol ne sont pas homogènes : entre un gobelet souple écrasé et un écocup rigide fragmenté en éclats, l'effort de collecte et la capacité à trier diffèrent. Traiter proprement l'après-événement suppose de comprendre ces natures de déchets, et de ramasser avant que la fragmentation ne transforme un objet identifiable en dispersion incontrôlable.
+Pour le nettoyage d'un événement, cela a des conséquences directes. Les déchets laissés au sol ne sont pas homogènes : entre un gobelet souple écrasé et un écocup rigide fragmenté en éclats, l'effort de collecte et la capacité à trier diffèrent. Traiter proprement l'après-événement suppose de comprendre ces natures de déchets, et de ramasser avant que la fragmentation ne transforme un objet identifiable en dispersion incontrôlable.**[Notre article sur la pollution urbaine.](/editorial/entreprise-nettoyage-ville-nord)**
 
 ## La bonne idée n'existe que bien appliquée
 
 L'écocup reste une solution pertinente — à condition de ne jamais oublier ce qui la rend vertueuse. Sans reprise réelle, sans différenciation permettant cette reprise, sans réutilisation effective, elle n'est qu'un gobelet plastique plus lourd que celui qu'elle remplace, avec une fâcheuse tendance à se fragmenter au sol. La leçon dépasse le gobelet : en matière d'environnement, l'intention ne suffit jamais. Ce sont les conditions de terrain — mesurables, vérifiables — qui font la différence entre une solution durable et une bonne idée qui salit.
+
+
+## À lire aussi
+
+- [Notre article sur la pollution urbaine.](/editorial/entreprise-nettoyage-ville-nord)
+- [Notre article sur le nettoyage urbain.](/editorial/nettoyage-voirie-propre-durable)

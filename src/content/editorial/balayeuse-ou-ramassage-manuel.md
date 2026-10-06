@@ -24,15 +24,15 @@ La balayeuse mécanique est un outil de rendement : elle traite un grand linéai
 
 Dans une même benne se retrouvent des feuilles, du sable, du gravier, de la terre, des mégots, des fragments de plastique et de verre, des poussières de voirie. Cet **agrégat souillé** pose un problème simple : une fois les matières mélangées et humides, elles ne sont plus séparables à un coût raisonnable. Le flux ne correspond à aucune filière de recyclage propre.
 
-Concrètement, ces déchets de balayage partent en très grande majorité vers l'enfouissement ou l'incinération, en tout-venant. Non parce que les matières qu'ils contiennent seraient invalorisables en soi, mais parce que le mélange les a rendues intriables. La valeur récupérable est perdue au moment même de la collecte.
+Concrètement, ces déchets de balayage partent en très grande majorité vers l'enfouissement ou l'incinération, en tout-venant. Non parce que les matières qu'ils contiennent seraient invalorisables en soi, mais parce que le mélange les a rendues intriables. La valeur récupérable est perdue au moment même de la collecte. **[Notre article sur le nettoyage de la voirie.](/editorial/nettoyage-voirie-propre-durable)**
 
 ## Ce que permet le ramassage manuel
 
-Le ramassage manuel — ce que le métier appelle le **piquage**, le prélèvement ciblé à la pince ou à la pique — fonctionne à l'inverse. Il collecte moins, plus lentement, mais chaque déchet est prélevé individuellement, sans être mélangé au reste.
+Le ramassage manuel — ce que le métier appelle le **piquage**, le prélèvement ciblé à la pince ou à la pique — fonctionne à l'inverse. Il collecte moins, plus lentement, mais chaque déchet est prélevé individuellement, sans être mélangé au reste. **[Notre article sur la pollution urbaine.](/editorial/entreprise-nettoyage-ville-nord)**
 
 Cette différence a une conséquence directe : le tri se fait **en amont**, au moment du ramassage, et non après. L'opérateur qui pique une canette, une bouteille plastique ou un emballage collecte un déchet propre, identifiable, qui peut rejoindre la filière de recyclage correspondante. Là où la balayeuse produit un flux unique intriable, le piquage produit des flux séparés et valorisables.
 
-Le tri en amont évite l'étape la plus coûteuse et la moins efficace du traitement : essayer de séparer après coup ce qui n'aurait jamais dû être mélangé.
+Le tri en amont évite l'étape la plus coûteuse et la moins efficace du traitement : essayer de séparer après coup ce qui n'aurait jamais dû être mélangé.**[Notre article sur le nettoyage urbain.](/editorial/nettoyage-urbain-derniers-metres)**
 
 > Un déchet trié à la source garde sa valeur ; le même déchet mélangé la perd définitivement.
 
@@ -53,10 +53,18 @@ Mais le coût de collecte n'est qu'une partie du coût complet. Il faut y ajoute
 - Un agrégat de balayeuse part en élimination, dont le coût inclut les taxes sur l'enfouissement et l'incinération — des postes appelés à augmenter.
 - Un déchet trié en amont peut, selon la matière, entrer dans une filière de valorisation dont le coût de traitement est différent, voire négatif pour certains flux.
 
-Le vrai calcul n'est donc pas « collecte rapide contre collecte lente », mais **coût complet contre coût complet**, traitement inclus. Selon la nature de la zone, la proportion de matières recyclables et le prix local de l'élimination, l'équation penche différemment. L'erreur serait d'affirmer que le piquage est toujours moins cher : ce qui est vrai, c'est que le poste de coût se déplace de la collecte vers le traitement, et que ce déplacement change le résultat final.
+Le vrai calcul n'est donc pas « collecte rapide contre collecte lente », mais **coût complet contre coût complet**, traitement inclus. Selon la nature de la zone, la proportion de matières recyclables et le prix local de l'élimination, l'équation penche différemment. L'erreur serait d'affirmer que le piquage est toujours moins cher : ce qui est vrai, c'est que le poste de coût se déplace de la collecte vers le traitement, et que ce déplacement change le résultat final. **[Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)**
 
 ## Choisir selon la zone, pas par principe
 
 Aucune des deux méthodes n'est supérieure dans l'absolu. La balayeuse reste imbattable sur les grands linéaires réguliers où le volume et la vitesse priment. Le ramassage manuel prend l'avantage là où le déchet est diffus, dispersé, et majoritairement composé de matières recyclables qu'il serait dommage d'envoyer en mélange à l'enfouissement.
 
 L'arbitrage juste consiste donc à traiter chaque zone selon sa nature : mécanisation pour le volume continu, piquage pour le diffus valorisable. Et à mesurer le coût là où il se joue réellement — au traitement, pas seulement à la collecte. C'est cette lecture complète qui distingue une décision de propreté fondée sur des faits d'un réflexe fondé sur la seule vitesse de ramassage.
+
+
+## À lire aussi
+
+- [Notre article sur le nettoyage de la voirie.](/editorial/nettoyage-voirie-propre-durable)
+- [Notre article sur la pollution urbaine.](/editorial/entreprise-nettoyage-ville-nord)
+- [Notre article sur le nettoyage urbain.](/editorial/nettoyage-urbain-derniers-metres)
+- [Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)

@@ -63,12 +63,20 @@ L'intérêt d'un ancrage territorial est double. D'une part, la connaissance fin
 
 ## Comment une collectivité évalue la prestation
 
-Pour une collectivité, le risque d'une prestation externalisée est de payer un service sans pouvoir vérifier ce qu'il produit. C'est précisément là que la documentation change la relation. Quand chaque intervention s'accompagne d'un relevé — zones traitées, volumes collectés, état avant et après — le service cesse d'être une promesse pour devenir un fait vérifiable.
+Pour une collectivité, le risque d'une prestation externalisée est de payer un service sans pouvoir vérifier ce qu'il produit. C'est précisément là que la documentation change la relation. Quand chaque intervention s'accompagne d'un relevé — zones traitées, volumes collectés, état avant et après — le service cesse d'être une promesse pour devenir un fait vérifiable. **[Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)**
 
-Cette transparence sert les deux parties. Elle permet à la collectivité de justifier la dépense et d'ajuster le périmètre selon les résultats. Elle protège l'intervenant, dont le travail devient mesurable plutôt que soumis à une appréciation subjective. Sur la durée, ces données constituent aussi une mémoire du terrain : elles révèlent quelles zones réencrassent le plus vite, où concentrer l'effort, et comment faire évoluer le dispositif au fil des saisons.
+Cette transparence sert les deux parties. Elle permet à la collectivité de justifier la dépense et d'ajuster le périmètre selon les résultats. Elle protège l'intervenant, dont le travail devient mesurable plutôt que soumis à une appréciation subjective. Sur la durée, ces données constituent aussi une mémoire du terrain : elles révèlent quelles zones réencrassent le plus vite, où concentrer l'effort, et comment faire évoluer le dispositif au fil des saisons. **[Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)**
 
 C'est cette logique de preuve, plus que tout argument commercial, qui distingue une prestation utile d'une simple sous-traitance de balayage.
 
 ## Complémentarité, mesure, terrain
 
-Une entreprise de nettoyage de ville ne se justifie pas par ce qu'elle affirme, mais par ce qu'elle couvre et ce qu'elle documente. Son rôle est précis : traiter le segment que la propreté publique laisse de côté pour des raisons de rendement, le faire de manière mesurée, et l'inscrire dans la durée. C'est à cette condition — complémentarité assumée, données à l'appui, adaptation au terrain — qu'elle apporte une valeur réelle à une collectivité.
+Une entreprise de nettoyage de ville ne se justifie pas par ce qu'elle affirme, mais par ce qu'elle couvre et ce qu'elle documente. Son rôle est précis : traiter le segment que la propreté publique laisse de côté pour des raisons de rendement, le faire de manière mesurée, et l'inscrire dans la durée. C'est à cette condition — complémentarité assumée, données à l'appui, adaptation au terrain — qu'elle apporte une valeur réelle à une collectivité. **[Notre article sur les zones d'activité.](/editorial/proprete-zone-activite)**
+
+
+## À lire aussi
+
+- [Notre article sur la pollution urbaine.](/editorial/pollution-urbaine-dechets-diffus)
+- [Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)
+- [Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)
+- [Notre article sur les zones d'activité.](/editorial/proprete-zone-activite)

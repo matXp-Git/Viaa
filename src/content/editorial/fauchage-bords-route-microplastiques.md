@@ -14,7 +14,7 @@ draft: false
 
 ## L'entretien des bas-côtés peut aggraver la pollution qu'il devrait limiter
 
-Faucher les accotements, débroussailler les talus, curer les fossés : ces opérations d'entretien sont nécessaires, pour la sécurité routière comme pour la maîtrise de la végétation. Mais réalisées dans le mauvais ordre, elles produisent un effet pervers rarement identifié : **elles transforment les déchets plastiques présents au sol en une pollution irrécupérable.**
+Faucher les accotements, débroussailler les talus, curer les fossés : ces opérations d'entretien sont nécessaires, pour la sécurité routière comme pour la maîtrise de la végétation. Mais réalisées dans le mauvais ordre, elles produisent un effet pervers rarement identifié : **elles transforment les déchets plastiques présents au sol en une pollution irrécupérable.** [Notre article sur la pollution urbaine.](/editorial/entreprise-nettoyage-ville-nord)
 
 Le mécanisme est simple et direct. Les bords de route sont le premier réceptacle des déchets abandonnés — jetés depuis les véhicules ou envolés de chargements non bâchés. Quand l'épareuse ou le broyeur passe sans que ces déchets aient été collectés au préalable, il ne les écarte pas : il les déchiquette, en même temps que la végétation, et disperse les fragments sur toute la zone. Un déchet jusque-là ramassable devient une multitude d'éclats que plus personne ne récupérera.
 
@@ -48,7 +48,7 @@ La solution ne demande pas de renoncer à l'entretien, mais d'en corriger la sé
 
 ### Première étape : la collecte des déchets diffus
 
-Avant toute intervention mécanique, un passage de ramassage ciblé retire les déchets présents sur la zone — plastiques, emballages, canettes — tant qu'ils sont encore entiers, identifiables et donc collectables proprement. C'est à ce moment, et à ce moment seulement, qu'un déchet plastique peut être orienté vers une filière de valorisation plutôt que dispersé.
+Avant toute intervention mécanique, un passage de ramassage ciblé retire les déchets présents sur la zone — plastiques, emballages, canettes — tant qu'ils sont encore entiers, identifiables et donc collectables proprement. C'est à ce moment, et à ce moment seulement, qu'un déchet plastique peut être orienté vers une filière de valorisation plutôt que dispersé. **[Notre article sur le nettoyage urbain.](/editorial/nettoyage-voirie-propre-durable)**
 
 ### Seconde étape : l'entretien végétal
 
@@ -59,3 +59,9 @@ Cette inversion de séquence change tout : le bord de route est réellement prop
 ## Une propreté qui se juge sous la surface
 
 La leçon dépasse le seul bord de route. Un espace peut paraître impeccable après une tonte et contenir, dans son sol, une charge de microplastiques que l'intervention vient d'y enfouir. La vraie propreté d'une zone verte ne se mesure pas à son apparence immédiate après fauchage, mais à ce qu'elle ne relâche pas dans les terres et les eaux. Prendre au sérieux l'entretien des bas-côtés, c'est accepter que l'ordre des gestes compte autant que les gestes eux-mêmes — et que ramasser d'abord n'est pas une option, mais la condition d'un entretien qui ne pollue pas.
+
+
+## À lire aussi
+
+- [Notre article sur la pollution urbaine.](/editorial/entreprise-nettoyage-ville-nord)
+- [Notre article sur le nettoyage urbain.](/editorial/nettoyage-voirie-propre-durable)

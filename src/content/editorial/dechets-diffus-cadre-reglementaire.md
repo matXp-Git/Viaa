@@ -16,7 +16,7 @@ draft: false
 
 La réglementation française sur l'abandon de déchets est d'abord conçue pour sanctionner celui qui jette. Depuis le décret n° 2026-433 du 2 juin 2026, entré en vigueur le 5 juin, les montants ont d'ailleurs été relevés. Mais tout ce dispositif répressif repose sur une condition : pouvoir **identifier l'auteur**. Or le déchet diffus est précisément celui qu'on ne peut rattacher à personne. Mégot, emballage, canette dispersés au sol : aucun contrevenant à verbaliser.
 
-Dans ce cas de figure — le plus fréquent en milieu urbain — la question n'est plus « qui punir ? » mais « qui doit nettoyer ? ». Et là, le droit désigne clairement le gestionnaire de l'espace : la commune sur son domaine public, le propriétaire sur son terrain privé.
+Dans ce cas de figure — le plus fréquent en milieu urbain — la question n'est plus « qui punir ? » mais « qui doit nettoyer ? ». Et là, le droit désigne clairement le gestionnaire de l'espace : la commune sur son domaine public, le propriétaire sur son terrain privé. **[Notre article sur la pollution urbaine.](/editorial/pollution-urbaine-dechets-diffus)**
 
 ## Ce que la loi sanctionne : l'abandon caractérisé
 
@@ -64,4 +64,11 @@ Pour une collectivité, la lecture réglementaire du déchet diffus mène à une
 
 Cela ne signifie pas qu'il faille tout internaliser. Mais cela impose de traiter la propreté des zones diffuses comme une obligation à assurer et à documenter, et non comme un supplément optionnel. Un dispositif tracé, ciblé sur les zones récurrentes et adossé à une mesure réelle, est ce qui permet à une collectivité de tenir son obligation là où le levier répressif, lui, n'a aucune prise.
 
-En définitive, la réglementation 2026 durcit la sanction de l'abandon, mais elle ne résout pas la question des déchets diffus — par nature sans auteur. L'enjeu, pour un gestionnaire d'espace public, n'est donc pas tant de connaître le barème des amendes que de comprendre où se situe sa propre responsabilité d'entretien, et de se donner les moyens de la documenter. C'est cette lecture, plus opérationnelle que répressive, qui permet d'aborder le sujet sereinement.
+En définitive, la réglementation 2026 durcit la sanction de l'abandon, mais elle ne résout pas la question des déchets diffus — par nature sans auteur. **[Notre article sur les dépôts sauvages.](/editorial/depot-sauvage-sanctions-commune)** L'enjeu, pour un gestionnaire d'espace public, n'est donc pas tant de connaître le barème des amendes que de comprendre où se situe sa propre responsabilité d'entretien, et de se donner les moyens de la documenter. C'est cette lecture, plus opérationnelle que répressive, qui permet d'aborder le sujet sereinement. **[Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)**
+
+
+## À lire aussi
+
+- **[Notre article sur la pollution urbaine.](/editorial/pollution-urbaine-dechets-diffus)**
+- **[Notre article sur les dépôts sauvages.](/editorial/depot-sauvage-sanctions-commune)**
+- **[Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)**
