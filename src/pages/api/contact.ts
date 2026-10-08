@@ -14,8 +14,14 @@ const PROFILE_LABELS: Record<string, string> = {
 
 async function verifyTurnstile(token: string | undefined, remoteIp: string | null) {
   const secretKey = import.meta.env.TURNSTILE_SECRET_KEY;
-  if (!secretKey) return false;
-  if (!token) return false;
+  if (!secretKey) {
+    console.error('Turnstile: TURNSTILE_SECRET_KEY absente à l\'exécution');
+    return false;
+  }
+  if (!token) {
+    console.error('Turnstile: jeton absent de la requête');
+    return false;
+  }
 
   const body = new URLSearchParams({ secret: secretKey, response: token });
   if (remoteIp) body.set('remoteip', remoteIp);
@@ -25,6 +31,9 @@ async function verifyTurnstile(token: string | undefined, remoteIp: string | nul
     body,
   });
   const outcome = await verifyRes.json();
+  if (outcome.success !== true) {
+    console.error('Turnstile: refus', JSON.stringify(outcome['error-codes'] ?? outcome), 'hostname:', outcome.hostname);
+  }
   return outcome.success === true;
 }
 
