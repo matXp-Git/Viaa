@@ -33,6 +33,21 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
         </label>
 
         <label class="contact__field">
+          <span class="data-label">Téléphone</span>
+          <input
+            type="tel"
+            name="phone"
+            required
+            autocomplete="tel"
+            inputmode="tel"
+            minlength="8"
+            maxlength="20"
+            pattern="[0-9+()\s.\-]{8,20}"
+            title="Numéro de téléphone (chiffres, espaces, + autorisés)"
+          />
+        </label>
+
+        <label class="contact__field">
           <span class="data-label">Vous êtes</span>
           <select name="profile">
             <option value="collectivite">Une collectivité</option>

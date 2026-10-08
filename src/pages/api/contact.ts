@@ -77,10 +77,12 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
 
   const name = data.get('name')?.toString().trim();
   const email = data.get('email')?.toString().trim();
+  const phone = data.get('phone')?.toString().trim();
   const profile = data.get('profile')?.toString() ?? 'autre';
   const message = data.get('message')?.toString().trim();
 
-  if (!name || !email || !message) {
+  const phoneDigits = phone?.replace(/\D/g, '').length ?? 0;
+  if (!name || !email || !phone || !message || phoneDigits < 8 || phoneDigits > 15) {
     return new Response(JSON.stringify({ error: 'Champs manquants.' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },
@@ -94,7 +96,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     to: CONTACT_DESTINATION,
     replyTo: email,
     subject: `Nouveau contact — ${PROFILE_LABELS[profile] ?? 'Autre'} — ${name}`,
-    text: `Nom : ${name}\nEmail : ${email}\nProfil : ${PROFILE_LABELS[profile] ?? 'Autre'}\n\nMessage :\n${message}`,
+    text: `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\nProfil : ${PROFILE_LABELS[profile] ?? 'Autre'}\n\nMessage :\n${message}`,
   });
 
   if (error) {
