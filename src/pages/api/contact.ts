@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
+import { createHash } from 'node:crypto';
 
 export const prerender = false;
 
@@ -32,7 +33,8 @@ async function verifyTurnstile(token: string | undefined, remoteIp: string | nul
   });
   const outcome = await verifyRes.json();
   if (outcome.success !== true) {
-    console.error('Turnstile: refus', JSON.stringify(outcome['error-codes'] ?? outcome), 'hostname:', outcome.hostname);
+    const fingerprint = createHash('sha256').update(secretKey).digest('hex').slice(0, 8);
+    console.error('Turnstile: refus', JSON.stringify(outcome['error-codes'] ?? outcome), 'secret longueur:', secretKey.length, 'empreinte:', fingerprint);
   }
   return outcome.success === true;
 }
