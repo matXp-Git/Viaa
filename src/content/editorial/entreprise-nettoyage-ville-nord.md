@@ -40,6 +40,7 @@ Sans mesure, pas de pilotage. Relevé de l'état avant et après, volumes collec
 ### Un traitement ciblé
 
 Plutôt qu'un passage systématique et indifférencié, une intervention sur points identifiés, calée sur le rythme réel d'encrassement de chaque zone. On traite ce qui doit l'être, quand il le faut.
+**[Notre article sur les zones en hiver.](/editorial/nettoyage-voirie-hiver-anticipé)**
 
 ### Une adaptation aux contraintes du terrain
 
@@ -80,3 +81,4 @@ Une entreprise de nettoyage de ville ne se justifie pas par ce qu'elle affirme, 
 - [Notre article sur les indicateurs de la propreté urbaine.](/editorial/mesurer-proprete-urbaine-indicateurs)
 - [Notre article sur comment documenter la résorption.](/editorial/dechets-diffus-cadre-reglementaire)
 - [Notre article sur les zones d'activité.](/editorial/proprete-zone-activite)
+- [Notre article sur les zones en hiver.](/editorial/nettoyage-voirie-hiver-anticipé)
